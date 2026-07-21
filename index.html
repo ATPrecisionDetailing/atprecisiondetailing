@@ -1,227 +1,162 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A&T Mobile Detailing</title>
+<!-- ========================= -->
+<!--   A&T Precision Detailing Home Page       -->
+<!-- ========================= -->
 
-<style>
-    body {
-        margin: 0;
-        font-family: 'Inter', sans-serif;
-        background-color: #000000;
-        color: #ffffff;
-        line-height: 1.5;
-    }
+<body style="margin:0; background:#0A0A0A; font-family:Arial, sans-serif;">
 
-    /* GLOBAL SPACING */
-    section {
-        padding: 60px 20px;
-        max-width: 1100px;
-        margin: auto;
-    }
+<!-- ========================= -->
+<!--   TOP LOGO + HEADLINE     -->
+<!-- ========================= -->
 
-    h1, h2, h3 {
-        font-family: 'Montserrat', sans-serif;
-        margin-bottom: 20px;
-        font-weight: 700;
-    }
-
-    h1 { font-size: 48px; }
-    h2 { font-size: 32px; }
-    h3 { font-size: 24px; }
-
-    p { font-size: 18px; }
-
-    /* LOGO */
-    .logo {
-        text-align: center;
-        padding: 30px 0;
-    }
-    .logo img {
-        height: 85px;
-    }
-
-    /* HERO */
-    .hero {
-        text-align: center;
-        padding: 80px 20px;
-        background: url('hero.jpg') center/cover no-repeat;
-        position: relative;
-    }
-    .hero::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: rgba(0,0,0,0.55);
-    }
-    .hero-content {
-        position: relative;
-        z-index: 2;
-        max-width: 800px;
-        margin: auto;
-    }
-
-    .cta-btn {
-        display: inline-block;
-        margin-top: 25px;
-        padding: 14px 28px;
-        border: 2px solid #D4AF37;
-        color: #D4AF37;
-        font-size: 18px;
-        text-decoration: none;
-        border-radius: 6px;
-    }
-
-    /* SERVICE CARDS */
-    .card-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-    }
-
-    .card {
-        background-color: #1A1A1A;
-        padding: 30px;
-        border-radius: 8px;
-        border-top: 4px solid #D4AF37;
-    }
-
-    .card ul {
-        margin: 15px 0;
-        padding-left: 20px;
-    }
-
-    /* TWO-COLUMN ADD-ONS */
-    .two-col {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 40px;
-    }
-
-    /* FOOTER */
-    footer {
-        text-align: center;
-        padding: 40px 20px;
-        background-color: #1A1A1A;
-        margin-top: 40px;
-    }
-</style>
-</head>
-
-<body>
-
-<!-- LOGO -->
-<div class="logo">
-    <img src="logo.png" alt="A&T Logo">
+<div style="text-align:center; padding:40px 20px; color:white;">
+    <img src="images/A&T-logo-transparent.png" style="width:140px; margin-bottom:20px;">
+    <h1 style="font-size:30px; color:#D4AF37; margin:0;">
+        Henderson’s Trusted Mobile Detailer
+    </h1>
 </div>
 
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>Henderson’s Trusted Mobile Detailer</h1>
-        <p>Owner-operated local mobile detailing focused on high-quality work, meticulous attention to detail, and honest transparent pricing. Every vehicle is detailed to the highest standard, with final walk-through approval to ensure you’re 100% satisfied.<br><br>At A&T, Every Detail Matters.</p>
-        <a class="cta-btn" href="tel:7252901829">Call / Text (725) 290-1829</a>
+
+<!-- ========================= -->
+<!--   OWNER OPERATED SECTION  -->
+<!-- ========================= -->
+
+<div style="max-width:900px; margin:0 auto; text-align:center; color:white; padding:0 20px;">
+    <p style="font-size:18px; opacity:0.9; line-height:1.6;">
+        Owner-operated local mobile detailing focused on high-quality work,
+        meticulous attention to detail, and honest transparent pricing.
+        Every vehicle is detailed to the highest standard, with final walk-through
+        approval to ensure you’re 100% satisfied.
+        <br><br>
+        <span style="color:#D4AF37; font-weight:600;">At A&T, Every Detail Matters.</span>
+    </p>
+</div>
+
+
+<!-- ========================= -->
+<!--   HERO BUBBLE             -->
+<!-- ========================= -->
+
+<div style="
+    max-width:1100px;
+    margin:50px auto;
+    background:#111;
+    border:1px solid #333;
+    border-radius:16px;
+    padding:30px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:30px;
+    color:white;
+">
+
+    <!-- LEFT IMAGE -->
+    <div style="flex:1; min-width:320px;">
+        <img src="images/hero.jpg"
+             style="width:100%; border-radius:12px; object-fit:cover;">
     </div>
-</section>
 
-<!-- BUSINESS HOURS -->
-<section>
-    <h2>Business Hours</h2>
-    <p>Sunday – Monday | 6:00 AM – 7:00 PM<br>Mobile Auto Detailing – Henderson, NV</p>
-</section>
+    <!-- RIGHT INFO -->
+    <div style="flex:1; min-width:280px; display:flex; flex-direction:column; gap:20px;">
 
-<!-- SERVICE AREAS -->
-<section>
-    <h2>Service Areas</h2>
-    <p>Henderson • Boulder City • Las Vegas Valley • Lake Mead</p>
-</section>
-
-<!-- SERVICE MENU -->
-<section>
-    <h2>Service Menu</h2>
-
-    <div class="card-grid">
-
-        <div class="card">
-            <h3>FULL DETAIL</h3>
-            <p>Complete interior & exterior reset<br>Includes everything in the Interior & Exterior Detail</p>
-            <p><strong>Cars $200<br>SUV / Truck $250</strong></p>
-        </div>
-
-        <div class="card">
-            <h3>EXTERIOR DETAIL</h3>
-            <ul>
-                <li>Foam Pre-Soak</li>
-                <li>Hand Wash</li>
-                <li>Wheels Cleaned & Tires Shined</li>
-                <li>Exterior Glass Cleaned</li>
-                <li>Spray Paint Decontamination</li>
-                <li>Hydrophobic Ceramic Wax Protection</li>
-                <li>Hydrophobic Glass Protection</li>
-            </ul>
-            <p><strong>Cars $100<br>SUV / Truck $120</strong></p>
-        </div>
-
-        <div class="card">
-            <h3>INTERIOR DETAIL</h3>
-            <ul>
-                <li>Full Interior Vacuum</li>
-                <li>All Surfaces Cleaned</li>
-                <li>Floor Mats Cleaned</li>
-                <li>Interior Glass & Mirrors Cleaned</li>
-                <li>Light Steam Cleaning</li>
-                <li>Door Jambs & Edges Cleaned</li>
-                <li>UV Interior Protection</li>
-                <li>50% Leather Conditioner</li>
-            </ul>
-            <p><strong>Cars $140<br>SUV / Truck $170</strong></p>
-        </div>
-
-        <div class="card">
-            <h3>DEEP INTERIOR RESET</h3>
-            <p>Includes everything in the Interior Detail</p>
-            <ul>
-                <li>Full Steam Treatment</li>
-                <li>Seats & Carpets Shampooed</li>
-                <li>Steam Sanitization</li>
-            </ul>
-            <p><strong>Cars $290<br>SUV / Truck $350</strong></p>
-        </div>
-
-    </div>
-</section>
-
-<!-- ADD-ONS -->
-<section>
-    <h2>Add-On Menu</h2>
-
-    <div class="two-col">
-
+        <!-- HOURS -->
         <div>
-            <h3>INTERIOR ADD-ONS</h3>
-            <p>Stain Treatment $40+<br>
-            Seat Shampoo $40+<br>
-            Carpet Shampoo $40+<br>
-            Pet Hair Removal $40+<br>
-            Leather Conditioning $10</p>
+            <h3 style="color:#D4AF37; margin-bottom:6px; font-size:20px;">Business Hours</h3>
+            <p style="opacity:0.8; line-height:1.5; margin:0;">
+                Sunday – Monday: 6:00 AM – 7:00 PM<br>
+                Mobile Auto Detailing — Henderson, NV
+            </p>
         </div>
 
+        <!-- SERVICE AREAS -->
         <div>
-            <h3>EXTERIOR ADD-ONS</h3>
-            <p>Headlight Restoration $80<br>
-            Trim Restoration $50+<br>
-            Hand Wax & Full $60<br>
-            Paint Decontamination</p>
+            <h3 style="color:#D4AF37; margin-bottom:6px; font-size:20px;">Service Areas</h3>
+            <p style="opacity:0.9; line-height:1.5; margin:0; font-size:16px;">
+                Henderson • Boulder City • Las Vegas Valley • Lake Mead
+            </p>
+            <p style="opacity:0.25; font-size:11px; margin-top:6px; line-height:1.4;">
+                Green Valley • Seven Hills • Inspirada • Anthem • Silverado Ranch • Whitney Ranch • Paradise • Southeast Las Vegas
+            </p>
+        </div>
+
+        <!-- CALL/TEXT BUTTON -->
+        <a href="tel:17252901829" style="
+            padding:12px;
+            border:2px solid #D4AF37;
+            color:#D4AF37;
+            background:#0D0D0D;
+            border-radius:6px;
+            text-decoration:none;
+            font-size:17px;
+            font-weight:600;
+            text-align:center;
+            transition:0.2s;
+        "
+        onmouseover="this.style.background='#D4AF37'; this.style.color='#0D0D0D';"
+        onmouseout="this.style.background='#0D0D0D'; this.style.color='#D4AF37';">
+            Call / Text (725) 290‑1829
+        </a>
+
+        <!-- SOCIALS -->
+        <div style="display:flex; flex-direction:column; gap:10px; margin-top:10px;">
+            <a href="https://share.google/vSmz6j1bWlF6RPH2W" target="_blank"
+               style="color:#D4AF37; font-size:18px; text-decoration:none;">
+                Google Reviews ★★★★★
+            </a>
+            <a href="https://www.instagram.com/ATprecisiondetail/" target="_blank"
+               style="color:#D4AF37; font-size:18px; text-decoration:none;">
+                Instagram
+            </a>
+            <a href="https://www.tiktok.com/@atprecisiondetailing" target="_blank"
+               style="color:#D4AF37; font-size:18px; text-decoration:none;">
+                TikTok
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61574392755466" target="_blank"
+               style="color:#D4AF37; font-size:18px; text-decoration:none;">
+                Facebook
+            </a>
         </div>
 
     </div>
-</section>
+</div>
 
-<!-- FOOTER -->
-<footer>
-    <p>Call / Text (725) 290-1829</p>
-</footer>
+
+<!-- ========================= -->
+<!--   SERVICE MENU IMAGES     -->
+<!-- ========================= -->
+
+<div style="max-width:900px; margin:0 auto; padding:20px; text-align:center; color:white;">
+    <h2 style="color:#D4AF37; margin-bottom:20px;">Service Menu</h2>
+
+    <img src="images/service-menu.png"
+         style="width:100%; max-width:700px; border-radius:12px; margin-bottom:30px;">
+
+    <h2 style="color:#D4AF37; margin-bottom:20px;">Add‑On Menu</h2>
+
+    <img src="images/addon-menu.png"
+         style="width:100%; max-width:700px; border-radius:12px; margin-bottom:40px;">
+</div>
+
+
+<!-- ========================= -->
+<!--   FINAL CALL BUTTON       -->
+<!-- ========================= -->
+
+<div style="text-align:center; padding:40px;">
+    <a href="tel:17252901829" style="
+        padding:14px 22px;
+        border:2px solid #D4AF37;
+        color:#D4AF37;
+        background:#0D0D0D;
+        border-radius:6px;
+        text-decoration:none;
+        font-size:20px;
+        font-weight:600;
+        transition:0.2s;
+    "
+    onmouseover="this.style.background='#D4AF37'; this.style.color='#0D0D0D';"
+    onmouseout="this.style.background='#0D0D0D'; this.style.color='#D4AF37';">
+        Call / Text (725) 290‑1829
+    </a>
+</div>
 
 </body>
-</html>

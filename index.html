@@ -237,6 +237,28 @@
     Service Menu
 </h2>
 
+<style>
+    .tooltip {
+        position: relative;
+        cursor: pointer;
+    }
+    .tooltip:hover::after {
+        content: "helps clean the car";
+        position: absolute;
+        left: 0;
+        top: 100%;
+        background: #222;
+        color: #D4AF37;
+        padding: 6px 10px;
+        border-radius: 6px;
+        font-size: 12px;
+        white-space: nowrap;
+        border: 1px solid #444;
+        margin-top: 4px;
+        z-index: 10;
+    }
+</style>
+
 <div style="
     max-width:850px;
     margin:0 auto 50px auto;
@@ -251,7 +273,7 @@
     <!-- FULL DETAIL -->
     <div style="margin-bottom:30px;">
         <div style="display:flex; justify-content:space-between; align-items:center;">
-            <h3 style="color:#D4AF37; font-size:22px; margin:0; border-bottom:2px solid #D4AF37; padding-bottom:4px;">
+            <h3 style="color:#D4AF37; font-size:22px; margin:0;">
                 Full Detail
             </h3>
             <div style="color:white; font-size:22px; font-weight:700; border-bottom:2px solid #D4AF37; padding-bottom:4px;">
@@ -260,8 +282,11 @@
         </div>
 
         <p style="opacity:0.85; line-height:1.6; margin:10px 0 0 0;">
-            <span style="color:#D4AF37;">•</span> Complete interior & exterior reset<br>
-            <span style="color:#D4AF37;">•</span> Includes everything in the Interior & Exterior Detail
+            <span class="tooltip" style="color:#D4AF37;">•</span> 
+            <span class="tooltip">Complete interior & exterior reset</span><br>
+
+            <span class="tooltip" style="color:#D4AF37;">•</span> 
+            <span class="tooltip">Includes everything in the Interior & Exterior Detail</span>
         </p>
 
         <hr style="border:0; border-top:1px solid #333; margin:15px 0 0 0;">
@@ -270,7 +295,7 @@
     <!-- EXTERIOR DETAIL -->
     <div style="margin-bottom:30px;">
         <div style="display:flex; justify-content:space-between; align-items:center;">
-            <h3 style="color:#D4AF37; font-size:22px; margin:0; border-bottom:2px solid #D4AF37; padding-bottom:4px;">
+            <h3 style="color:#D4AF37; font-size:22px; margin:0;">
                 Exterior Detail
             </h3>
             <div style="color:white; font-size:22px; font-weight:700; border-bottom:2px solid #D4AF37; padding-bottom:4px;">
@@ -279,13 +304,13 @@
         </div>
 
         <p style="opacity:0.85; line-height:1.6; margin:10px 0 0 0;">
-            <span style="color:#D4AF37;">•</span> Foam Pre-Soak<br>
-            <span style="color:#D4AF37;">•</span> Hand Wash<br>
-            <span style="color:#D4AF37;">•</span> Wheels Cleaned & Tires Shined<br>
-            <span style="color:#D4AF37;">•</span> Exterior Glass Cleaned<br>
-            <span style="color:#D4AF37;">•</span> Spot Paint Decontamination<br>
-            <span style="color:#D4AF37;">•</span> Hydrophobic Ceramic Wax Protection<br>
-            <span style="color:#D4AF37;">•</span> Hydrophobic Glass Protection
+            <span class="tooltip" style="color:#D4AF37;">•</span> <span class="tooltip">Foam Pre-Soak</span><br>
+            <span class="tooltip" style="color:#D4AF37;">•</span> <span class="tooltip">Hand Wash</span><br>
+            <span class="tooltip" style="color:#D4AF37;">•</span> <span class="tooltip">Wheels Cleaned & Tires Shined</span><br>
+            <span class="tooltip" style="color:#D4AF37;">•</span> <span class="tooltip">Exterior Glass Cleaned</span><br>
+            <span class="tooltip" style="color:#D4AF37;">•</span> <span class="tooltip">Spot Paint Decontamination</span><br>
+            <span class="tooltip" style="color:#D4AF37;">•</span> <span class="tooltip">Hydrophobic Ceramic Wax Protection</span><br>
+            <span class="tooltip" style="color:#D4AF37;">•</span> <span class="tooltip">Hydrophobic Glass Protection</span>
         </p>
 
         <hr style="border:0; border-top:1px solid #333; margin:15px 0 0 0;">
@@ -294,7 +319,7 @@
     <!-- INTERIOR DETAIL -->
     <div style="margin-bottom:30px;">
         <div style="display:flex; justify-content:space-between; align-items:center;">
-            <h3 style="color:#D4AF37; font-size:22px; margin:0; border-bottom:2px solid #D4AF37; padding-bottom:4px;">
+            <h3 style="color:#D4AF37; font-size:22px; margin:0;">
                 Interior Detail
             </h3>
             <div style="color:white; font-size:22px; font-weight:700; border-bottom:2px solid #D4AF37; padding-bottom:4px;">
@@ -303,14 +328,14 @@
         </div>
 
         <p style="opacity:0.85; line-height:1.6; margin:10px 0 0 0;">
-            <span style="color:#D4AF37;">•</span> Full Interior Vacuum<br>
-            <span style="color:#D4AF37;">•</span> All Surfaces Cleaned<br>
-            <span style="color:#D4AF37;">•</span> Floor Mats Cleaned<br>
-            <span style="color:#D4AF37;">•</span> Interior Glass & Mirrors Cleaned<br>
-            <span style="color:#D4AF37;">•</span> Light Steam Cleaning<br>
-            <span style="color:#D4AF37;">•</span> Door Jambs & Edges Cleaned<br>
-            <span style="color:#D4AF37;">•</span> UV Interior Protection<br>
-            <span style="color:#D4AF37;">•</span> + Leather Conditioner ($10)
+            <span class="tooltip" style="color:#D4AF37;">•</span> <span class="tooltip">Full Interior Vacuum</span><br>
+            <span class="tooltip" style="color:#D4AF37;">•</span> <span class="tooltip">All Surfaces Cleaned</span><br>
+            <span class="tooltip" style="color:#D4AF37;">•</span> <span class="tooltip">Floor Mats Cleaned</span><br>
+            <span class="tooltip" style="color:#D4AF37;">•</span> <span class="tooltip">Interior Glass & Mirrors Cleaned</span><br>
+            <span class="tooltip" style="color:#D4AF37;">•</span> <span class="tooltip">Light Steam Cleaning</span><br>
+            <span class="tooltip" style="color:#D4AF37;">•</span> <span class="tooltip">Door Jambs & Edges Cleaned</span><br>
+            <span class="tooltip" style="color:#D4AF37;">•</span> <span class="tooltip">UV Interior Protection</span><br>
+            <span class="tooltip" style="color:#D4AF37;">•</span> <span class="tooltip">+ Leather Conditioner ($10)</span>
         </p>
 
         <hr style="border:0; border-top:1px solid #333; margin:15px 0 0 0;">
@@ -319,7 +344,7 @@
     <!-- DEEP INTERIOR RESET -->
     <div style="margin-bottom:30px;">
         <div style="display:flex; justify-content:space-between; align-items:center;">
-            <h3 style="color:#D4AF37; font-size:22px; margin:0; border-bottom:2px solid #D4AF37; padding-bottom:4px;">
+            <h3 style="color:#D4AF37; font-size:22px; margin:0;">
                 Deep Interior Reset
             </h3>
             <div style="color:white; font-size:22px; font-weight:700; border-bottom:2px solid #D4AF37; padding-bottom:4px;">
@@ -328,59 +353,59 @@
         </div>
 
         <p style="opacity:0.85; line-height:1.6; margin:10px 0 0 0;">
-            <span style="color:#D4AF37;">•</span> Includes everything in the Interior Detail<br>
-            <span style="color:#D4AF37;">•</span> Full Stain Treatment<br>
-            <span style="color:#D4AF37;">•</span> Seats & Carpets Shampooed<br>
-            <span style="color:#D4AF37;">•</span> Steam Sanitization
+            <span class="tooltip" style="color:#D4AF37;">•</span> <span class="tooltip">Includes everything in the Interior Detail</span><br>
+            <span class="tooltip" style="color:#D4AF37;">•</span> <span class="tooltip">Full Stain Treatment</span><br>
+            <span class="tooltip" style="color:#D4AF37;">•</span> <span class="tooltip">Seats & Carpets Shampooed</span><br>
+            <span class="tooltip" style="color:#D4AF37;">•</span> <span class="tooltip">Steam Sanitization</span>
         </p>
 
         <hr style="border:0; border-top:1px solid #333; margin:15px 0 0 0;">
     </div>
 
     <!-- INTERIOR ADD-ONS -->
-    <div style="margin-bottom:25px; text-align:center;">
+    <div style="margin-bottom:25px;">
         <h3 style="color:#D4AF37; font-size:22px; margin-bottom:10px;">Interior Add‑Ons</h3>
 
-        <div style="display:inline-flex; flex-direction:column; align-items:center; gap:10px;">
+        <div style="display:flex; flex-direction:column; gap:10px;">
             <div style="display:flex; gap:20px;">
                 <span style="color:#D4AF37; font-weight:700;">$40+</span>
-                <span>Stain Treatment</span>
+                <span class="tooltip">Stain Treatment</span>
             </div>
             <div style="display:flex; gap:20px;">
                 <span style="color:#D4AF37; font-weight:700;">$40+</span>
-                <span>Seat Shampoo</span>
+                <span class="tooltip">Seat Shampoo</span>
             </div>
             <div style="display:flex; gap:20px;">
                 <span style="color:#D4AF37; font-weight:700;">$40+</span>
-                <span>Carpet Shampoo</span>
+                <span class="tooltip">Carpet Shampoo</span>
             </div>
             <div style="display:flex; gap:20px;">
                 <span style="color:#D4AF37; font-weight:700;">$40+</span>
-                <span>Pet Hair Removal</span>
+                <span class="tooltip">Pet Hair Removal</span>
             </div>
             <div style="display:flex; gap:20px;">
                 <span style="color:#D4AF37; font-weight:700;">$10</span>
-                <span>Leather Conditioning</span>
+                <span class="tooltip">Leather Conditioning</span>
             </div>
         </div>
     </div>
 
     <!-- EXTERIOR ADD-ONS -->
-    <div style="text-align:center;">
+    <div>
         <h3 style="color:#D4AF37; font-size:22px; margin-bottom:10px;">Exterior Add‑Ons</h3>
 
-        <div style="display:inline-flex; flex-direction:column; align-items:center; gap:10px;">
+        <div style="display:flex; flex-direction:column; gap:10px;">
             <div style="display:flex; gap:20px;">
                 <span style="color:#D4AF37; font-weight:700;">$80</span>
-                <span>Headlight Restoration</span>
+                <span class="tooltip">Headlight Restoration</span>
             </div>
             <div style="display:flex; gap:20px;">
                 <span style="color:#D4AF37; font-weight:700;">$50+</span>
-                <span>Trim Restoration</span>
+                <span class="tooltip">Trim Restoration</span>
             </div>
             <div style="display:flex; gap:20px;">
                 <span style="color:#D4AF37; font-weight:700;">$60</span>
-                <span>Hand Wax & Paint Decon</span>
+                <span class="tooltip">Hand Wax & Paint Decon</span>
             </div>
         </div>
     </div>

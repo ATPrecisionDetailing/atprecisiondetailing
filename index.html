@@ -1,3 +1,45 @@
+<style>
+.menu-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.menu-thumb {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.menu-thumb:hover {
+    opacity: 0.85;
+}
+
+/* Modal */
+.menu-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+}
+</style>
+
 <!-- ========================= -->
 <!--   A&T Precision Detailing Home Page       -->
 <!-- ========================= -->
@@ -190,24 +232,31 @@
 <!--   FULL WIDTH MENU IMAGES     -->
 <!-- ========================= -->
 
-<div style="width:100%; margin-top:40px;">
+<div class="menu-gallery">
 
-   <img src="images/service-menu.png"
-     style="
-        width:100%;
-        max-width:850px;
-        display:block;
-        margin:0 auto;
-        border-radius:12px;
-     ">
+    <img src="images/service-menu.png"
+         class="menu-thumb"
+         onclick="openMenuModal('images/service-menu.png')">
 
     <img src="images/addon-menu.png"
-     style="
-        width:100%;
-        max-width:850px;
-        display:block;
-        margin:40px auto 0 auto;
-        border-radius:12px;
-     ">
+         class="menu-thumb"
+         onclick="openMenuModal('images/addon-menu.png')">
 
 </div>
+
+<!-- Modal -->
+<div id="menuModal" class="menu-modal" onclick="closeMenuModal()">
+    <img id="menuModalImg">
+</div>
+
+    <script>
+function openMenuModal(src) {
+    document.getElementById('menuModalImg').src = src;
+    document.getElementById('menuModal').style.display = 'flex';
+}
+
+function closeMenuModal() {
+    document.getElementById('menuModal').style.display = 'none';
+}
+</script>
+

@@ -262,12 +262,40 @@
 
 
 <!-- ========================= -->
-<!--   PREMIUM TEXT SERVICE MENU (WITH TOOLTIPS) -->
+<!--   PREMIUM TEXT SERVICE MENU -->
 <!-- ========================= -->
+
+<!-- Title ABOVE the menu box with more spacing -->
+<h2 style="color:#D4AF37; text-align:center; margin-bottom:30px; font-size:32px; letter-spacing:1px;">
+    Service Menu
+</h2>
+
+<style>
+    .tooltip {
+        position: relative;
+        cursor: pointer;
+        font-size: 18px; /* increased font size */
+        margin-left: 6px; /* spacing from bullet */
+    }
+    .tooltip:hover::after {
+        content: "helps clean the car";
+        position: absolute;
+        left: 0;
+        bottom: 120%; /* tooltip ABOVE the mouse */
+        background: #222;
+        color: #D4AF37;
+        padding: 6px 10px;
+        border-radius: 6px;
+        font-size: 12px;
+        white-space: nowrap;
+        border: 1px solid #444;
+        z-index: 10;
+    }
+</style>
 
 <div style="
     max-width:850px;
-    margin:50px auto;
+    margin:0 auto 50px auto;
     background:#111;
     border:1px solid #2a2a2a;
     border-radius:14px;
@@ -276,193 +304,144 @@
     font-family:Arial, sans-serif;
 ">
 
-    <!-- Title -->
-    <h2 style="color:#D4AF37; text-align:center; margin-bottom:25px; font-size:28px; letter-spacing:1px;">
-        Service Menu
-    </h2>
-
     <!-- FULL DETAIL -->
-    <div style="margin-bottom:30px;">
+    <div style="margin-bottom:35px;">
         <div style="display:flex; justify-content:space-between; align-items:center;">
             <h3 style="color:#D4AF37; font-size:22px; margin:0;">
-                <span class="tooltip">Full Detail
-                    <span class="tooltiptext">
-                        Complete Interior & Exterior Reset. Our most popular package. Combines our full Interior Detail and Exterior Detail to restore your vehicle inside and out while adding long-lasting protection.
-                    </span>
-                </span>
+                Full Detail
             </h3>
-            <div style="color:#D4AF37; font-size:22px; font-weight:700;">$200 / $250</div>
+            <div style="color:white; font-size:22px; font-weight:700; border-bottom:2px solid #D4AF37; padding-bottom:4px;">
+                $200 / $250
+            </div>
         </div>
 
-        <hr style="border:0; border-top:1px solid #333; margin:10px 0 15px 0;">
-
-        <p style="opacity:0.85; line-height:1.6; margin:0;">
-            Complete Interior & Exterior Reset<br>
-            Our most popular package.
+        <p style="opacity:0.85; line-height:1.8; margin:10px 0 0 0;">
+            <span style="color:#D4AF37;">•</span><span class="tooltip">Complete interior & exterior reset</span><br>
+            <span style="color:#D4AF37;">•</span><span class="tooltip">Includes everything in the Interior & Exterior Detail</span>
         </p>
+
+        <hr style="border:0; border-top:1px solid #333; margin:20px 0 0 0;">
     </div>
 
     <!-- EXTERIOR DETAIL -->
-    <div style="margin-bottom:30px;">
+    <div style="margin-bottom:35px;">
         <div style="display:flex; justify-content:space-between; align-items:center;">
             <h3 style="color:#D4AF37; font-size:22px; margin:0;">
-                <span class="tooltip">Exterior Detail
-                    <span class="tooltiptext">
-                        Foam pre-soak loosens dirt and contaminants. Hand wash with PH-balanced soap. Wheels cleaned, tires shined, glass cleaned, spot paint decon, ceramic wax protection, and hydrophobic glass protection.
-                    </span>
-                </span>
+                Exterior Detail
             </h3>
-            <div style="color:#D4AF37; font-size:22px; font-weight:700;">$100 / $120</div>
+            <div style="color:white; font-size:22px; font-weight:700; border-bottom:2px solid #D4AF37; padding-bottom:4px;">
+                $100 / $120
+            </div>
         </div>
 
-        <hr style="border:0; border-top:1px solid #333; margin:10px 0 15px 0;">
-
-        <p style="opacity:0.85; line-height:1.6; margin:0;">
-            Foam Pre-Soak<br>
-            Hand Wash<br>
-            Wheels Cleaned & Tires Shined<br>
-            Exterior Glass Cleaned<br>
-            Spot Paint Decontamination<br>
-            Hydrophobic Ceramic Wax Protection<br>
-            Hydrophobic Glass Protection
+        <p style="opacity:0.85; line-height:1.8; margin:10px 0 0 0;">
+            <span style="color:#D4AF37;">•</span><span class="tooltip">Foam Pre-Soak</span><br>
+            <span style="color:#D4AF37;">•</span><span class="tooltip">Hand Wash</span><br>
+            <span style="color:#D4AF37;">•</span><span class="tooltip">Wheels Cleaned & Tires Shined</span><br>
+            <span style="color:#D4AF37;">•</span><span class="tooltip">Exterior Glass Cleaned</span><br>
+            <span style="color:#D4AF37;">•</span><span class="tooltip">Spot Paint Decontamination</span><br>
+            <span style="color:#D4AF37;">•</span><span class="tooltip">Hydrophobic Ceramic Wax Protection</span><br>
+            <span style="color:#D4AF37;">•</span><span class="tooltip">Hydrophobic Glass Protection</span>
         </p>
+
+        <hr style="border:0; border-top:1px solid #333; margin:20px 0 0 0;">
     </div>
 
     <!-- INTERIOR DETAIL -->
-    <div style="margin-bottom:30px;">
+    <div style="margin-bottom:35px;">
         <div style="display:flex; justify-content:space-between; align-items:center;">
             <h3 style="color:#D4AF37; font-size:22px; margin:0;">
-                <span class="tooltip">Interior Detail
-                    <span class="tooltiptext">
-                        Full vacuum, surface cleaning, mats cleaned, glass cleaned, light steam cleaning, door jambs cleaned, UV interior protection, and optional leather conditioning.
-                    </span>
-                </span>
+                Interior Detail
             </h3>
-            <div style="color:#D4AF37; font-size:22px; font-weight:700;">$140 / $170</div>
+            <div style="color:white; font-size:22px; font-weight:700; border-bottom:2px solid #D4AF37; padding-bottom:4px;">
+                $140 / $170
+            </div>
         </div>
 
-        <hr style="border:0; border-top:1px solid #333; margin:10px 0 15px 0;">
-
-        <p style="opacity:0.85; line-height:1.6; margin:0;">
-            Full Interior Vacuum<br>
-            All Surfaces Cleaned<br>
-            Floor Mats Cleaned<br>
-            Interior Glass & Mirrors Cleaned<br>
-            Light Steam Cleaning<br>
-            Door Jambs & Edges Cleaned<br>
-            UV Interior Protection<br>
-            Leather Conditioner (+$10)
+        <p style="opacity:0.85; line-height:1.8; margin:10px 0 0 0;">
+            <span style="color:#D4AF37;">•</span><span class="tooltip">Full Interior Vacuum</span><br>
+            <span style="color:#D4AF37;">•</span><span class="tooltip">All Surfaces Cleaned</span><br>
+            <span style="color:#D4AF37;">•</span><span class="tooltip">Floor Mats Cleaned</span><br>
+            <span style="color:#D4AF37;">•</span><span class="tooltip">Interior Glass & Mirrors Cleaned</span><br>
+            <span style="color:#D4AF37;">•</span><span class="tooltip">Light Steam Cleaning</span><br>
+            <span style="color:#D4AF37;">•</span><span class="tooltip">Door Jambs & Edges Cleaned</span><br>
+            <span style="color:#D4AF37;">•</span><span class="tooltip">UV Interior Protection</span><br>
+            <span style="color:#D4AF37;">•</span><span class="tooltip">+ Leather Conditioner ($10)</span>
         </p>
+
+        <hr style="border:0; border-top:1px solid #333; margin:20px 0 0 0;">
     </div>
 
     <!-- DEEP INTERIOR RESET -->
-    <div style="margin-bottom:30px;">
+    <div style="margin-bottom:35px;">
         <div style="display:flex; justify-content:space-between; align-items:center;">
             <h3 style="color:#D4AF37; font-size:22px; margin:0;">
-                <span class="tooltip">Deep Interior Reset
-                    <span class="tooltiptext">
-                        Includes everything in the Interior Detail plus full stain treatment, seat shampoo, carpet shampoo, and steam sanitization for deep cleaning and odor removal.
-                    </span>
-                </span>
+                Deep Interior Reset
             </h3>
-            <div style="color:#D4AF37; font-size:22px; font-weight:700;">$290 / $350</div>
+            <div style="color:white; font-size:22px; font-weight:700; border-bottom:2px solid #D4AF37; padding-bottom:4px;">
+                $290 / $350
+            </div>
         </div>
 
-        <hr style="border:0; border-top:1px solid #333; margin:10px 0 15px 0;">
-
-        <p style="opacity:0.85; line-height:1.6; margin:0;">
-            Includes Everything in the Interior Detail<br>
-            Full Stain Treatment<br>
-            Seats & Carpets Shampooed<br>
-            Steam Sanitization
+        <p style="opacity:0.85; line-height:1.8; margin:10px 0 0 0;">
+            <span style="color:#D4AF37;">•</span><span class="tooltip">Includes everything in the Interior Detail</span><br>
+            <span style="color:#D4AF37;">•</span><span class="tooltip">Full Stain Treatment</span><br>
+            <span style="color:#D4AF37;">•</span><span class="tooltip">Seats & Carpets Shampooed</span><br>
+            <span style="color:#D4AF37;">•</span><span class="tooltip">Steam Sanitization</span>
         </p>
+
+        <hr style="border:0; border-top:1px solid #333; margin:20px 0 0 0;">
     </div>
 
-    <!-- ADD-ONS TITLE -->
-    <h2 style="color:#D4AF37; text-align:center; margin:40px 0 20px 0; font-size:26px; letter-spacing:1px;">
-        Add‑On Menu
-    </h2>
-
     <!-- INTERIOR ADD-ONS -->
-    <div style="margin-bottom:25px;">
-        <h3 style="color:#D4AF37; font-size:22px; margin-bottom:10px;">Interior Add‑Ons</h3>
+    <div style="margin-bottom:40px;">
+        <h3 style="color:#D4AF37; font-size:22px; margin-bottom:20px;">Interior Add‑Ons</h3>
 
-        <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
-            <span class="tooltip">Stain Treatment
-                <span class="tooltiptext">
-                    Professional stain removal for food, drinks, mud, grease, and other contaminants. Results vary depending on stain age and type.
-                </span>
-            </span>
-            <span style="color:#D4AF37; font-weight:700;">$40+</span>
-        </div>
-
-        <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
-            <span class="tooltip">Seat Shampoo
-                <span class="tooltiptext">
-                    Deep cleans fabric seats using extraction to remove embedded dirt, stains, and odors.
-                </span>
-            </span>
-            <span style="color:#D4AF37; font-weight:700;">$40+</span>
-        </div>
-
-        <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
-            <span class="tooltip">Carpet Shampoo
-                <span class="tooltiptext">
-                    Deep extraction cleaning removes dirt, stains, and trapped debris while helping eliminate odors.
-                </span>
-            </span>
-            <span style="color:#D4AF37; font-weight:700;">$40+</span>
-        </div>
-
-        <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
-            <span class="tooltip">Pet Hair Removal
-                <span class="tooltiptext">
-                    Removes stubborn embedded pet hair using specialized brushes and tools. Pricing varies by amount of hair.
-                </span>
-            </span>
-            <span style="color:#D4AF37; font-weight:700;">$40+</span>
-        </div>
-
-        <div style="display:flex; justify-content:space-between;">
-            <span class="tooltip">Leather Conditioning
-                <span class="tooltiptext">
-                    Moisturizes and protects leather surfaces to prevent cracking, fading, and UV damage.
-                </span>
-            </span>
-            <span style="color:#D4AF37; font-weight:700;">$10</span>
+        <div style="display:flex; flex-direction:column; gap:14px;">
+            <div style="display:flex; gap:20px;">
+                <span style="color:#D4AF37; font-weight:700;">$40+</span>
+                <span class="tooltip">Stain Treatment</span>
+            </div>
+            <div style="display:flex; gap:20px;">
+                <span style="color:#D4AF37; font-weight:700;">$40+</span>
+                <span class="tooltip">Seat Shampoo</span>
+            </div>
+            <div style="display:flex; gap:20px;">
+                <span style="color:#D4AF37; font-weight:700;">$40+</span>
+                <span class="tooltip">Carpet Shampoo</span>
+            </div>
+            <div style="display:flex; gap:20px;">
+                <span style="color:#D4AF37; font-weight:700;">$40+</span>
+                <span class="tooltip">Pet Hair Removal</span>
+            </div>
+            <div style="display:flex; gap:20px;">
+                <span style="color:#D4AF37; font-weight:700;">$10</span>
+                <span class="tooltip">Leather Conditioning</span>
+            </div>
         </div>
     </div>
 
     <!-- EXTERIOR ADD-ONS -->
-    <div>
-        <h3 style="color:#D4AF37; font-size:22px; margin-bottom:10px;">Exterior Add‑Ons</h3>
+    <div style="margin-bottom:20px;">
+        <h3 style="color:#D4AF37; font-size:22px; margin-bottom:20px;">Exterior Add‑Ons</h3>
 
-        <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
-            <span class="tooltip">Headlight Restoration
-                <span class="tooltiptext">
-                    Removes oxidation and yellowing to restore clarity and improve nighttime visibility. Adds 1 year of UV protection.
-                </span>
-            </span>
-            <span style="color:#D4AF37; font-weight:700;">$80</span>
-        </div>
-
-        <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
-            <span class="tooltip">Trim Restoration
-                <span class="tooltiptext">
-                    Restores faded exterior trim and adds 1 year of UV protection to keep it darker and newer longer.
-                </span>
-            </span>
-            <span style="color:#D4AF37; font-weight:700;">$50+</span>
-        </div>
-
-        <div style="display:flex; justify-content:space-between;">
-            <span class="tooltip">Hand Wax & Paint Decon
-                <span class="tooltiptext">
-                    Clay bar removes bonded contaminants, prepping paint for hand-applied ceramic wax. Adds months of hydrophobic protection and shine. Must be done indoors and cure 12–24 hours.
-                </span>
-            </span>
-            <span style="color:#D4AF37; font-weight:700;">$60</span>
+        <div style="display:flex; flex-direction:column; gap:14px;">
+            <div style="display:flex; gap:20px;">
+                <span style="color:#D4AF37; font-weight:700;">$80</span>
+                <span class="tooltip">Headlight Restoration</span>
+            </div>
+            <div style="display:flex; gap:20px;">
+                <span style="color:#D4AF37; font-weight:700;">$50+</span>
+                <span class="tooltip">Trim Restoration</span>
+            </div>
+            <div style="display:flex; gap:20px;">
+                <span style="color:#D4AF37; font-weight:700;">$60</span>
+                <span class="tooltip">Hand Wax & Paint Decon</span>
+            </div>
         </div>
     </div>
+
+</div>
+
 
 </div>

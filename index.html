@@ -39,6 +39,38 @@
     border-radius: 12px;
 }
 </style>
+<style>
+.tooltip {
+    position: relative;
+    cursor: pointer;
+    color: white; /* white text for bullet items */
+}
+
+.tooltiptext {
+    visibility: hidden;
+    opacity: 0;
+    width: 280px;
+    background-color: #111;
+    color: #fff;
+    text-align: left;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #D4AF37;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    bottom: 120%;
+    transition: opacity 0.2s;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+</style>
+
 
 <!-- ========================= -->
 <!--   A&T Precision Detailing Home Page       -->

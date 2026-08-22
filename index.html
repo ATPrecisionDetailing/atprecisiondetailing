@@ -1,718 +1,1380 @@
-<style>
-.menu-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 40px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>A&T Precision Detailing | Premium Mobile Detailing in Henderson & Las Vegas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Owner-operated premium mobile detailing serving Henderson, Boulder City, Las Vegas & Southern Nevada. Full details, interior, exterior, ceramic protection, headlight restoration, and more. We come to you.">
+  <meta name="keywords" content="Henderson mobile detailing, Las Vegas car detailing, interior detail, exterior detail, full detail, ceramic spray, mobile auto detailing, A&T Precision Detailing">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-.menu-thumb {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: 0.2s;
-}
+  <!-- LocalBusiness Schema for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoDetailing",
+    "name": "A&T Precision Detailing",
+    "image": "https://m.yelp.com/biz_photos/a-and-t-precision-detailing-henderson", 
+    "telephone": "+1-725-290-1829",
+    "areaServed": [
+      "Henderson",
+      "Boulder City",
+      "Las Vegas",
+      "Lake Mead",
+      "Green Valley",
+      "Seven Hills",
+      "Inspirada",
+      "Anthem",
+      "Silverado Ranch",
+      "Whitney Ranch",
+      "Paradise",
+      "Southeast Las Vegas",
+      "Summerlin",
+      "Southern Nevada",
+      "Cadence"
+    ],
+    "url": "https://atprecisiondetailing.github.io",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Henderson",
+      "addressRegion": "NV",
+      "addressCountry": "US"
+    },
+    "description": "Owner-operated premium mobile detailing focused on high-quality work, meticulous attention to detail, and honest transparent pricing."
+  }
+  </script>
 
-.menu-thumb:hover {
-    opacity: 0.85;
-}
+  <style>
+    :root {
+      --bg-dark: #050607;
+      --bg-card: #101216;
+      --gold: #d4af37;
+      --gold-soft: #c9a33a;
+      --text-light: #f5f5f5;
+      --text-muted: #b0b3bd;
+      --accent: #1f2933;
+      --danger: #e63946;
+      --success: #2a9d8f;
+    }
 
-/* Modal */
-.menu-modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.85);
-    justify-content: center;
-    align-items: center;
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-.menu-modal img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 12px;
-}
-</style>
-<style>
-.tooltip {
-    position: relative;
-    cursor: pointer;
-    color: white; /* white text for bullet items */
-}
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #14161c 0, #050607 55%);
+      color: var(--text-light);
+      line-height: 1.6;
+    }
 
-.tooltiptext {
-    visibility: hidden;
-    opacity: 0;
-    width: 280px;
-    background-color: #111;
-    color: #fff;
-    text-align: left;
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #D4AF37;
-    position: absolute;
-    z-index: 10;
-    left: 0;
-    bottom: 120%;
-    transition: opacity 0.2s;
-    font-size: 14px;
-    line-height: 1.5;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-}
-</style>
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-<!-- ========================= -->
-<!--   A&T Precision Detailing Home Page       -->
-<!-- ========================= -->
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(16px);
+      background: rgba(5, 6, 7, 0.92);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+    }
 
-<body style="margin:0; background:#0A0A0A; font-family:Arial, sans-serif;">
+    .nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
 
-<!-- ========================= -->
-<!--   TOP LOGO + HEADLINE     -->
-<!-- ========================= -->
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
 
-<div style="text-align:center; padding:60px 20px 40px 20px; color:white;">
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      border: 2px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
 
-    <!-- LARGE CLEAN LOGO (55–60% width) -->
-   <img src="images/A&T-logo-transparent.png"
-     style="
-        width:38%;
-        max-width:420px;
-        margin-bottom:25px;
-     ">
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
 
-    <!-- MODERN GOLD TAGLINE (10% bigger) -->
-    <div style="
-        font-size:18px;
-        color:#D4AF37;
-        letter-spacing:1.2px;
-        font-weight:600;
-        opacity:0.9;
-        font-family:'Arial', sans-serif;
-        margin-top:5px;
-    ">
-       Premium Mobile Auto Detailing
+    .brand-text h1 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
 
-    </div>
+    .brand-text span {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
 
-    <!-- SMALLER “Since 2026” UNDERNEATH -->
-    <div style="
-        font-size:15px;
-        color:#D4AF37;
-        letter-spacing:1.5px;
-        font-weight:500;
-        opacity:0.75;
-        font-family:'Arial', sans-serif;
-        margin-top:4px;
-    ">
-       Based in - Henderson & Boulder City
-    </div>
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      font-size: 0.9rem;
+    }
 
-       <!-- SMALLER “Since 2026” UNDERNEATH -->
-    <div style="
-        font-size:15px;
-        color:#D4AF37;
-        letter-spacing:1.5px;
-        font-weight:500;
-        opacity:0.75;
-        font-family:'Arial', sans-serif;
-        margin-top:4px;
-    ">
-      Since 2026
-    </div>
+    .nav-links a {
+      position: relative;
+      padding-bottom: 0.15rem;
+    }
 
-</div>
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-soft));
+      transition: width 0.2s ease-out;
+    }
 
+    .nav-links a:hover::after {
+      width: 100%;
+    }
 
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
 
+    .phone-pill {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
 
+    .phone-pill strong {
+      color: var(--text-light);
+    }
 
+    .btn {
+      border-radius: 999px;
+      padding: 0.55rem 1.2rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.18s ease-out;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      white-space: nowrap;
+    }
 
-<!-- ========================= -->
-<!--   HERO BUBBLE             -->
-<!-- ========================= -->
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+      color: #050607;
+      border-color: rgba(0, 0, 0, 0.4);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    }
 
-<div style="
-    max-width:850px;
-    margin:30px auto;
-    background:#111;
-    border:1px solid #2a2a2a;
-    border-radius:14px;
-    padding:20px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:20px;
-    color:white;
-">
+    .btn-primary:hover {
+      filter: brightness(1.05);
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.7);
+    }
 
-   <!-- LEFT IMAGE -->
-<div style="flex:1; min-width:320px; display:flex;">
-    <img src="images/service-menu.png"
-         style="
-            width:100%;
-            height:100%;
-            max-height:100%;
-            border-radius:12px;
-            object-fit:cover;
-         ">
-</div>
+    .btn-outline {
+      background: transparent;
+      color: var(--gold);
+      border-color: rgba(212, 175, 55, 0.6);
+    }
 
+    .btn-outline:hover {
+      background: rgba(212, 175, 55, 0.08);
+    }
 
-    <!-- RIGHT INFO -->
-    <div style="flex:1; min-width:280px; display:flex; flex-direction:column; gap:16px;">
+    .hero {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 2rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
 
-        <!-- HOURS -->
-        <div style="margin-bottom:-6px;">
-            <h3 style="color:#D4AF37; margin-bottom:3px; font-size:20px;">Business Hours</h3>
-            <p style="opacity:0.8; line-height:1.5; margin:0;">
-                Sunday – Monday: 6:00 AM – 7:00 PM
-            </p>
+    .hero-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .hero-kicker {
+      font-size: 0.85rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-soft);
+    }
+
+    .hero-title {
+      font-size: clamp(2.1rem, 3vw, 2.6rem);
+      font-weight: 700;
+      line-height: 1.15;
+    }
+
+    .hero-title span {
+      color: var(--gold);
+    }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      max-width: 34rem;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      color: var(--text-muted);
+      background: rgba(16, 18, 22, 0.9);
+    }
+
+    .badge strong {
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .hero-note strong {
+      color: var(--text-light);
+    }
+
+    .hero-meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .hero-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .hero-meta span::before {
+      content: "•";
+      color: var(--gold-soft);
+    }
+
+    .hero-media {
+      position: relative;
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at top left, #1b1f27 0, #050607 55%);
+      border-radius: 1.2rem;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      padding: 1.4rem;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.75);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .hero-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .hero-card-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .hero-card-tag {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(42, 157, 143, 0.12);
+      color: var(--success);
+      border: 1px solid rgba(42, 157, 143, 0.5);
+    }
+
+    .hero-card-body {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .hero-card-body strong {
+      color: var(--text-light);
+      font-weight: 500;
+    }
+
+    .hero-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .hero-card-footer span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .hero-card-footer span::before {
+      content: "✓";
+      color: var(--gold-soft);
+      font-size: 0.8rem;
+    }
+
+    .section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 1.5rem;
+      margin-bottom: 1.75rem;
+      flex-wrap: wrap;
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .section-title span {
+      color: var(--gold);
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      max-width: 32rem;
+    }
+
+    .section-tagline {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 1.75rem;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border-radius: 1rem;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      padding: 1.4rem;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .card-soft {
+      border-color: rgba(212, 175, 55, 0.18);
+      background: #0b0d11;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .pill {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(16, 18, 22, 0.9);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      color: var(--text-muted);
+    }
+
+    .pill strong {
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    .trust-list {
+      list-style: none;
+      display: grid;
+      gap: 0.6rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .trust-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .trust-icon {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(212, 175, 55, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      color: var(--gold);
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .trust-list strong {
+      color: var(--text-light);
+      font-weight: 500;
+    }
+
+    .service-menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.1rem;
+    }
+
+    .service-card {
+      background: linear-gradient(145deg, #0b0d11, #050607);
+      border-radius: 0.9rem;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(212, 175, 55, 0.12), transparent 55%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .service-name {
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .service-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .service-line {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .service-prices {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.4rem;
+      font-size: 0.8rem;
+    }
+
+    .price-pill {
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(5, 6, 7, 0.9);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .price-pill span {
+      color: var(--text-muted);
+    }
+
+    .price-pill strong {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .service-note {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.3rem;
+    }
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.6rem;
+      font-size: 0.8rem;
+    }
+
+    .area-pill {
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(16, 18, 22, 0.9);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .area-pill strong {
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    .reviews-wrapper {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 1.5rem;
+      align-items: stretch;
+    }
+
+    .reviews-embed {
+      border-radius: 1rem;
+      overflow: hidden;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      background: #0b0d11;
+      min-height: 280px;
+    }
+
+    .reviews-embed iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .reviews-summary {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .reviews-stars {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.9rem;
+    }
+
+    .star {
+      color: var(--gold);
+      font-size: 1rem;
+    }
+
+    .social-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .social-pill {
+      font-size: 0.8rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      background: rgba(16, 18, 22, 0.9);
+      color: var(--text-muted);
+    }
+
+    .social-pill strong {
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    .gallery {
+      position: relative;
+      border-radius: 1rem;
+      overflow: hidden;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      background: #050607;
+    }
+
+    .gallery-track {
+      display: flex;
+      transition: transform 0.4s ease-out;
+    }
+
+    .gallery-slide {
+      min-width: 100%;
+      height: 260px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .gallery-slide::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent 55%);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      left: 1rem;
+      bottom: 1rem;
+      z-index: 2;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+    }
+
+    .gallery-controls {
+      position: absolute;
+      right: 0.75rem;
+      bottom: 0.75rem;
+      display: flex;
+      gap: 0.4rem;
+      z-index: 3;
+    }
+
+    .gallery-btn {
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      border: 1px solid rgba(212, 175, 55, 0.6);
+      background: rgba(5, 6, 7, 0.9);
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background 0.15s ease-out;
+    }
+
+    .gallery-btn:hover {
+      background: rgba(212, 175, 55, 0.12);
+    }
+
+    .form-card {
+      background: var(--bg-card);
+      border-radius: 1rem;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      padding: 1.4rem;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.9rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      font-size: 0.8rem;
+    }
+
+    .form-group label {
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      border-radius: 0.6rem;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      background: #050607;
+      color: var(--text-light);
+      padding: 0.55rem 0.7rem;
+      font-size: 0.85rem;
+      outline: none;
+      transition: border-color 0.15s ease-out, box-shadow 0.15s ease-out;
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: #5b5f68;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.4);
+    }
+
+    .form-textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .form-footer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      margin-top: 0.75rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .form-footer span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .form-footer span::before {
+      content: "•";
+      color: var(--gold-soft);
+    }
+
+    footer {
+      border-top: 1px solid rgba(212, 175, 55, 0.25);
+      margin-top: 2rem;
+      background: #050607;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .footer-inner a {
+      color: var(--gold-soft);
+    }
+
+    .footer-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .footer-row span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .footer-row span::before {
+      content: "•";
+      color: var(--gold-soft);
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-media {
+        order: -1;
+      }
+
+      .reviews-wrapper {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .grid-2 {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav {
+        flex-wrap: wrap;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 1.5rem;
+      }
+
+      .section {
+        padding: 2rem 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header>
+    <nav class="nav">
+      <div class="brand">
+        <div class="brand-mark">A&T</div>
+        <div class="brand-text">
+          <h1>A&T Precision Detailing</h1>
+          <span>Premium Mobile Detailing • Henderson & Las Vegas</span>
         </div>
-
-        <!-- SERVICE AREAS -->
-        <div>
-            <h3 style="color:#D4AF37; margin-bottom:6px; font-size:20px;">Service Areas</h3>
-            <p style="opacity:0.9; line-height:1.5; margin:0; font-size:16px;">
-                Henderson • Boulder City • Las Vegas • Lake Mead
-            </p>
-            <p style="opacity:0.25; font-size:11px; margin-top:6px; line-height:1.4;">
-                Green Valley • Seven Hills • Inspirada • Anthem • Silverado Ranch • Whitney Ranch • Paradise • Southeast Las Vegas • Summerlin • Southern Nevada
-            </p>
+      </div>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#areas">Service Areas</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#quote">Get a Quote</a>
+      </div>
+      <div class="nav-cta">
+        <div class="phone-pill">
+          Call/Text: <strong>(725) 290-1829</strong>
         </div>
+        <a href="tel:7252901829" class="btn btn-primary">Book Now</a>
+      </div>
+    </nav>
+  </header>
 
-        <!-- CALL/TEXT BUTTON -->
-        <a href="tel:17252901829" style="
-            padding:12px;
-            border:2px solid #D4AF37;
-            color:#D4AF37;
-            background:#0D0D0D;
-            border-radius:6px;
-            text-decoration:none;
-            font-size:17px;
-            font-weight:600;
-            text-align:center;
-            transition:0.2s;
-        "
-        onmouseover="this.style.background='#D4AF37'; this.style.color='#0D0D0D';"
-        onmouseout="this.style.background='#0D0D0D'; this.style.color='#D4AF37';">
-            Call / Text (725) 290‑1829
-        </a>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-copy">
+      <div class="hero-kicker">Owner-Operated • Mobile • Premium</div>
+      <h2 class="hero-title">
+        Premium Mobile Detailing in <span>Henderson & Las Vegas</span> — Every Detail Matters.
+      </h2>
+      <p class="hero-subtitle">
+        A&T Precision Detailing delivers professional mobile detailing directly to your home, work, or business.
+        Owner-operated, transparent pricing, and meticulous attention to every surface — from daily drivers to
+        performance cars, RVs, and fleets.
+      </p>
 
-        <!-- SOCIALS -->
-        <div style="display:flex; flex-direction:column; gap:12px; margin-top:10px;">
+      <div class="hero-badges">
+        <div class="badge"><strong>Owner Operated:</strong> You deal directly with the owner from booking to final walkthrough.</div>
+        <div class="badge"><strong>Premium Products:</strong> Professional chemicals & safe detailing techniques.</div>
+        <div class="badge"><strong>Mobile Service:</strong> We come to you — customer power & water required.</div>
+        <div class="badge"><strong>Transparent Pricing:</strong> No hidden fees. No surprises.</div>
+      </div>
 
-            <a href="YOUR_GOOGLE_REVIEWS_LINK" target="_blank"
-               style="color:#D4AF37; font-size:17px; text-decoration:none; display:flex; align-items:center; gap:8px;">
-                <img src="images/Google.png" style="width:18px; height:18px; opacity:0.9;">
-                Google Reviews ★★★★★
-            </a>
+      <div class="hero-cta-row">
+        <a href="#quote" class="btn btn-primary">Get a Fast, Easy Quote</a>
+        <a href="#services" class="btn btn-outline">View Service Menu</a>
+        <span class="hero-note">
+          <strong>Text-friendly:</strong> Send photos of your vehicle for a tailored quote.
+        </span>
+      </div>
 
-            <a href="https://m.yelp.com/biz/a-and-t-precision-detailing-henderson" target="_blank"
-               style="color:#D4AF37; font-size:17px; text-decoration:none; display:flex; align-items:center; gap:8px;">
-                <img src="images/yelp.png" style="width:18px; height:18px; opacity:0.9;">
-                Yelp Reviews ★★★★★
-            </a>
-
-            <a href="https://www.instagram.com/ATprecisiondetail/" target="_blank"
-               style="color:#D4AF37; font-size:17px; text-decoration:none; display:flex; align-items:center; gap:8px;">
-                <img src="images/instagram.png" style="width:18px; height:18px; opacity:0.9;">
-                Instagram
-            </a>
-
-            <a href="https://www.tiktok.com/@atprecisiondetailing" target="_blank"
-               style="color:#D4AF37; font-size:17px; text-decoration:none; display:flex; align-items:center; gap:8px;">
-                <img src="images/tiktok.png" style="width:18px; height:18px; opacity:0.9;">
-                TikTok
-            </a>
-
-            <a href="https://www.facebook.com/profile.php?id=61574392755466" target="_blank"
-               style="color:#D4AF37; font-size:17px; text-decoration:none; display:flex; align-items:center; gap:8px;">
-                <img src="images/facebook.png" style="width:18px; height:18px; opacity:0.9;">
-                Facebook
-            </a>
-
-            <a href="https://api.whatsapp.com/send?phone=7252901829" target="_blank"
-               style="color:#D4AF37; font-size:17px; text-decoration:none; display:flex; align-items:center; gap:8px;">
-                <img src="images/Whatsapp.png" style="width:18px; height:18px; opacity:0.9;">
-                WhatsApp
-            </a>
-
-            <a href="https://www.youtube.com/@atprecisiondetailing" target="_blank"
-               style="color:#D4AF37; font-size:17px; text-decoration:none; display:flex; align-items:center; gap:8px;">
-                <img src="images/youtube.png" style="width:18px; height:18px; opacity:0.9;">
-                YouTube
-            </a>
-
-        </div>
-
+      <div class="hero-meta">
+        <span>Serving Henderson, Boulder City, Las Vegas & Southern Nevada</span>
+        <span>Interior • Exterior • Full Details • Ceramic Spray • Glass Protection • Headlights • Trim</span>
+      </div>
     </div>
-</div>
 
-
-<!-- ========================= -->
-<!--   MOBILE AUTO DETAILING SERVICE MENU -->
-<!-- ========================= -->
-
-<h2 style="color:#D4AF37; text-align:center; margin-bottom:30px; font-size:32px; letter-spacing:1px;">
-    Mobile Auto Detailing Services</h2>
-</h2>
-
-<div style="
-    max-width:850px;
-    margin:0 auto 50px auto;
-    background:#111;
-    border:1px solid #2a2a2a;
-    border-radius:14px;
-    padding:30px;
-    color:white;
-    font-family:Arial, sans-serif;
-">
-
-    <!-- FULL DETAIL -->
-    <div style="margin-bottom:35px;">
-        <div style="display:flex; justify-content:space-between; align-items:center;">
-            <h3 style="color:#D4AF37; font-size:22px; margin:0;">Full Detail</h3>
-            <div style="color:white; font-size:22px; font-weight:700; border-bottom:2px solid #D4AF37; padding-bottom:4px;">
-                $200 / $250
+    <div class="hero-media">
+      <div class="hero-card">
+        <div class="hero-card-header">
+          <div>
+            <div class="hero-card-title">Precision Mobile Detailing</div>
+            <div style="font-size:0.8rem;color:var(--text-muted);">
+              Henderson • Boulder City • Las Vegas • Southern Nevada
             </div>
+          </div>
+          <div class="hero-card-tag">Owner Operated</div>
         </div>
+        <div class="hero-card-body">
+          <p><strong>Premium Products & Service</strong> — We use professional chemicals and safe detailing techniques. No shortcuts.</p>
+          <p>Every vehicle is treated like our own, with a final walk-through to ensure you’re 100% satisfied.</p>
+          <p>Interior, exterior, full details, ceramic spray protection, hydrophobic glass protection, clay bar paint
+            decontamination, stain removal, steam cleaning, headlight restoration, trim restoration, leather conditioning,
+            pet hair removal, and maintenance detailing for cars, trucks, SUVs, RVs, vans, and fleet vehicles.</p>
+        </div>
+        <div class="hero-card-footer">
+          <span>Mobile service — we come to you.</span>
+          <span>Customer power & water required for all appointments.</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <p style="opacity:0.85; line-height:1.8; margin:10px 0 0 0;">
-            <span style="color:#D4AF37;">•</span>
-            <span class="tooltip">Includes everything in the Interior & Exterior Detail
-                <span class="tooltiptext">
-                    Our most popular package. Combines our complete Interior Detail and Exterior Detail to restore your vehicle inside and out while adding long-lasting protection.
-                </span>
-            </span>
+  <!-- TRUST / ABOUT + SERVICE MENU -->
+  <section id="services" class="section">
+    <div class="section-header">
+      <div>
+        <h3 class="section-title"><span>Service Menu</span> & Why Drivers Choose A&T</h3>
+        <p class="section-subtitle">
+          Clear, honest pricing and premium-level results. Whether you need a full reset or a maintenance detail,
+          our menu is built for real-world vehicles — not just show cars.
         </p>
-
-        <hr style="border:0; border-top:1px solid #333; margin:20px 0 0 0;">
+      </div>
+      <div class="section-tagline">
+        At A&T, Every Detail Matters. Owner-operated, high-quality work, and transparent pricing from quote to final walkthrough.
+      </div>
     </div>
 
-    <!-- EXTERIOR DETAIL -->
-    <div style="margin-bottom:35px;">
-        <div style="display:flex; justify-content:space-between; align-items:center;">
-            <h3 style="color:#D4AF37; font-size:22px; margin:0;">Exterior Detail</h3>
-            <div style="color:white; font-size:22px; font-weight:700; border-bottom:2px solid #D4AF37; padding-bottom:4px;">
-                $100 / $120
+    <div class="grid-2">
+      <!-- TRUST CARD -->
+      <div class="card card-soft">
+        <div class="pill-row">
+          <div class="pill"><strong>Owner Operated</strong> — direct contact from booking to walkthrough.</div>
+          <div class="pill"><strong>Premium Products</strong> — pro-grade chemicals & safe techniques.</div>
+          <div class="pill"><strong>Mobile Service</strong> — we come to you.</div>
+          <div class="pill"><strong>Transparent Pricing</strong> — no hidden fees.</div>
+        </div>
+        <ul class="trust-list">
+          <li>
+            <div class="trust-icon">✓</div>
+            <div>
+              <strong>Owner-operated local mobile detailing.</strong><br>
+              Focused on high-quality work, meticulous attention to detail, and honest, transparent pricing.
             </div>
+          </li>
+          <li>
+            <div class="trust-icon">✓</div>
+            <div>
+              <strong>Final walk-through approval.</strong><br>
+              We don’t leave until you’ve seen the results and are 100% satisfied with the detail.
+            </div>
+          </li>
+          <li>
+            <div class="trust-icon">✓</div>
+            <div>
+              <strong>Built for real life.</strong><br>
+              Daily drivers, work trucks, performance cars, RVs, vans, and fleets — we detail them all.
+            </div>
+          </li>
+          <li>
+            <div class="trust-icon">✓</div>
+            <div>
+              <strong>Mobile convenience.</strong><br>
+              At home, work, or your business — we bring professional detailing directly to your location.
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- SERVICE MENU GRID -->
+      <div class="service-menu">
+        <!-- FULL DETAIL -->
+        <div class="service-card">
+          <div class="service-name">Full Detail</div>
+          <div class="service-desc">
+            Complete interior & exterior reset. Includes everything in the Interior & Exterior Detail.
+          </div>
+          <div class="service-prices">
+            <div class="price-pill">
+              <span>Cars</span>
+              <strong>$140</strong>
+            </div>
+            <div class="price-pill">
+              <span>SUVs / Trucks</span>
+              <strong>$190</strong>
+            </div>
+          </div>
         </div>
 
-        <p style="opacity:0.85; line-height:1.8; margin:10px 0 0 0;">
+        <!-- EXTERIOR DETAIL -->
+        <div class="service-card">
+          <div class="service-name">Exterior Detail</div>
+          <div class="service-line">Foam pre-soak • Hand wash • Wheels cleaned • Tires shined</div>
+          <div class="service-line">Exterior glass cleaned • Hydrophobic ceramic paint & glass sealant</div>
+          <div class="service-prices">
+            <div class="price-pill">
+              <span>Cars</span>
+              <strong>$80</strong>
+            </div>
+            <div class="price-pill">
+              <span>SUVs / Trucks</span>
+              <strong>$100</strong>
+            </div>
+          </div>
+        </div>
 
-            <span style="color:#D4AF37;">•</span>
-            <span class="tooltip">Foam Pre-Soak
-                <span class="tooltiptext">
-                    A thick layer of foam loosens dirt, road grime, bugs, and contaminants before washing. Helps reduce swirl marks caused by paint contaminants.
-                </span>
-            </span><br>
+        <!-- INTERIOR DETAIL -->
+        <div class="service-card">
+          <div class="service-name">Interior Detail</div>
+          <div class="service-line">Full interior vacuum • All surfaces cleaned • Floor mats cleaned</div>
+          <div class="service-line">Interior glass & mirrors cleaned • Light steam cleaning</div>
+          <div class="service-line">Door jambs & edges cleaned • UV interior protection</div>
+          <div class="service-prices">
+            <div class="price-pill">
+              <span>Cars</span>
+              <strong>$100</strong>
+            </div>
+            <div class="price-pill">
+              <span>SUVs / Trucks</span>
+              <strong>$130</strong>
+            </div>
+          </div>
+          <div class="service-note">+ <strong>$10</strong> — Leather conditioner add-on.</div>
+        </div>
 
-            <span style="color:#D4AF37;">•</span>
-            <span class="tooltip">Hand Wash
-                <span class="tooltiptext">
-                    Washed by hand using premium microfiber mitts and PH-balanced soaps for a safer, more thorough clean than automatic car washes.
-                </span>
-            </span><br>
+        <!-- HEADLIGHT RESTORATION -->
+        <div class="service-card">
+          <div class="service-name">Headlight Restoration</div>
+          <div class="service-desc">
+            Restore clarity, improve nighttime visibility, and refresh the look of your front end.
+          </div>
+          <div class="service-prices">
+            <div class="price-pill">
+              <span>1 Headlight</span>
+              <strong>$60</strong>
+            </div>
+            <div class="price-pill">
+              <span>2 Headlights</span>
+              <strong>$80</strong>
+            </div>
+          </div>
+        </div>
 
-            <span style="color:#D4AF37;">•</span>
-            <span class="tooltip">Wheels Cleaned & Tires Shined
-                <span class="tooltiptext">
-                    Removes brake dust, dirt, and grime before applying a tire dressing that restores a rich appearance and protects against cracking and fading.
-                </span>
-            </span><br>
+        <!-- ADD-ONS -->
+        <div class="service-card">
+          <div class="service-name">Add-Ons</div>
+          <div class="service-line">Full shampoo & extraction <strong>$100+</strong></div>
+          <div class="service-line">Clay bar & carnauba wax <strong>$50+</strong></div>
+          <div class="service-line">Trim restoration <strong>$50+</strong></div>
+          <div class="service-note">
+            Perfect for heavily used interiors, oxidized paint, and faded exterior plastics.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <span style="color:#D4AF37;">•</span>
-            <span class="tooltip">Exterior Glass Cleaned
-                <span class="tooltiptext">
-                    Crystal-clear windows improve visibility and remove fingerprints, road film, bugs, and water spots for a streak-free finish.
-                </span>
-            </span><br>
-
-            <span style="color:#D4AF37;">•</span>
-            <span class="tooltip">Spot Paint Decontamination
-                <span class="tooltiptext">
-                    Removes stubborn contaminants like bug residue, tree sap, tar, and bonded debris that regular washing can't remove.
-                </span>
-            </span><br>
-
-            <span style="color:#D4AF37;">•</span>
-            <span class="tooltip">Hydrophobic Ceramic Wax Protection
-                <span class="tooltiptext">
-                    Adds a protective layer that repels water, dirt, and UV rays while increasing gloss. Makes future washes easier.
-                </span>
-            </span><br>
-
-            <span style="color:#D4AF37;">•</span>
-            <span class="tooltip">Hydrophobic Glass Protection
-                <span class="tooltiptext">
-                    Creates a water-repelling barrier on windows, improving visibility during rain by helping water bead and roll away.
-                </span>
-            </span>
-
+  <!-- SERVICE AREAS -->
+  <section id="areas" class="section">
+    <div class="section-header">
+      <div>
+        <h3 class="section-title"><span>Service Areas</span> We Come To You</h3>
+        <p class="section-subtitle">
+          A&T Precision Detailing provides mobile detailing throughout Henderson, Boulder City, Las Vegas, and surrounding
+          Southern Nevada communities. At home, work, or your business — we bring the detail bay to your driveway.
         </p>
-
-        <hr style="border:0; border-top:1px solid #333; margin:20px 0 0 0;">
+      </div>
+      <div class="section-tagline">
+        Customer power & water required for all appointments. Text us photos for a fast quote.
+      </div>
     </div>
 
-    <!-- INTERIOR DETAIL -->
-    <div style="margin-bottom:35px;">
-        <div style="display:flex; justify-content:space-between; align-items:center;">
-            <h3 style="color:#D4AF37; font-size:22px; margin:0;">Interior Detail</h3>
-            <div style="color:white; font-size:22px; font-weight:700; border-bottom:2px solid #D4AF37; padding-bottom:4px;">
-                $140 / $170
-            </div>
-        </div>
+    <div class="card">
+      <div class="areas-grid">
+        <div class="area-pill"><strong>Henderson</strong></div>
+        <div class="area-pill"><strong>Boulder City</strong></div>
+        <div class="area-pill"><strong>Las Vegas</strong></div>
+        <div class="area-pill"><strong>Lake Mead</strong></div>
+        <div class="area-pill"><strong>Green Valley</strong></div>
+        <div class="area-pill"><strong>Seven Hills</strong></div>
+        <div class="area-pill"><strong>Inspirada</strong></div>
+        <div class="area-pill"><strong>Anthem</strong></div>
+        <div class="area-pill"><strong>Silverado Ranch</strong></div>
+        <div class="area-pill"><strong>Whitney Ranch</strong></div>
+        <div class="area-pill"><strong>Paradise</strong></div>
+        <div class="area-pill"><strong>Southeast Las Vegas</strong></div>
+        <div class="area-pill"><strong>Summerlin</strong></div>
+        <div class="area-pill"><strong>Southern Nevada</strong> (Cadence & surrounding)</div>
+      </div>
+    </div>
+  </section>
 
-        <p style="opacity:0.85; line-height:1.8; margin:10px 0 0 0;">
-
-            <span style="color:#D4AF37;">•</span>
-            <span class="tooltip">Full Interior Vacuum
-                <span class="tooltiptext">
-                    Removes dirt, dust, sand, crumbs, and debris from carpets, seats, mats, and hard-to-reach areas.
-                </span>
-            </span><br>
-
-            <span style="color:#D4AF37;">•</span>
-            <span class="tooltip">All Surfaces Cleaned
-                <span class="tooltiptext">
-                    Dashboard, console, door panels, cup holders, vents, and other surfaces cleaned to remove dust, fingerprints, and grime.
-                </span>
-            </span><br>
-
-            <span style="color:#D4AF37;">•</span>
-            <span class="tooltip">Floor Mats Cleaned
-                <span class="tooltiptext">
-                    Rubber or carpet mats cleaned to remove dirt, stains, and debris.
-                </span>
-            </span><br>
-
-            <span style="color:#D4AF37;">•</span>
-            <span class="tooltip">Interior Glass & Mirrors Cleaned
-                <span class="tooltiptext">
-                    Streak-free cleaning improves visibility and removes haze, fingerprints, and film.
-                </span>
-            </span><br>
-
-            <span style="color:#D4AF37;">•</span>
-            <span class="tooltip">Light Steam Cleaning
-                <span class="tooltiptext">
-                    Steam loosens grime in cracks, vents, cup holders, and other tight areas while sanitizing without harsh chemicals.
-                </span>
-            </span><br>
-
-            <span style="color:#D4AF37;">•</span>
-            <span class="tooltip">Door Jambs & Edges Cleaned
-                <span class="tooltiptext">
-                    Removes built-up dirt and grease around door edges for a clean look every time you open the door.
-                </span>
-            </span><br>
-
-            <span style="color:#D4AF37;">•</span>
-            <span class="tooltip">UV Interior Protection
-                <span class="tooltiptext">
-                    303 UV protectant defends plastics and trim from fading, drying, and cracking while repelling dust and dirt.
-                </span>
-            </span><br>
-
-            <span style="color:#D4AF37;">•</span>
-            <span class="tooltip">Leather Conditioner (+$10)
-                <span class="tooltiptext">
-                    Cleans, softens, and moisturizes leather to prevent drying and cracking while restoring a natural finish.
-                </span>
-            </span>
-
+  <!-- REVIEWS + SOCIAL + GALLERY -->
+  <section id="reviews" class="section">
+    <div class="section-header">
+      <div>
+        <h3 class="section-title"><span>Real Reviews</span> & Social Proof</h3>
+        <p class="section-subtitle">
+          See what local drivers say about A&T Precision Detailing. We’re proud of our work — and we let our customers
+          speak for it.
         </p>
-
-        <hr style="border:0; border-top:1px solid #333; margin:20px 0 0 0;">
+      </div>
+      <div class="section-tagline">
+        Shout-outs, repeat clients, and word-of-mouth — backed by real online reviews.
+      </div>
     </div>
 
-    <!-- DEEP INTERIOR RESET -->
-    <div style="margin-bottom:35px;">
-        <div style="display:flex; justify-content:space-between; align-items:center;">
-            <h3 style="color:#D4AF37; font-size:22px; margin:0;">Deep Interior Reset</h3>
-            <div style="color:white; font-size:22px; font-weight:700; border-bottom:2px solid #D4AF37; padding-bottom:4px;">
-                $290 / $350
+    <div class="reviews-wrapper">
+      <!-- GOOGLE REVIEWS EMBED -->
+      <div class="reviews-embed">
+        <!-- Replace the src below with your actual Google Reviews widget / embed URL -->
+        <!-- Example: a widget from a reviews platform or your Google Business profile embed -->
+        <iframe src="about:blank" title="Google Reviews">
+        </iframe>
+      </div>
+
+      <!-- SUMMARY + SOCIAL -->
+      <div class="card card-soft">
+        <div class="reviews-summary">
+          <div class="reviews-stars">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span>Premium mobile detailing, owner-operated, and focused on real results.</span>
+          </div>
+          <p>
+            We never take shortcuts — every vehicle is treated like our own. From interior resets to exterior protection,
+            our goal is simple: deliver a detail that feels better than “just cleaned.”
+          </p>
+          <p>
+            Whether you found us through a shout-out, social media, or a friend’s recommendation, you’ll get the same
+            level of care and communication from first message to final walkthrough.
+          </p>
+          <div>
+            <strong>Connect with A&T Precision Detailing:</strong>
+            <div class="social-row">
+              <a href="https://m.yelp.com/biz/a-and-t-precision-detailing-henderson" class="social-pill"><strong>Yelp</strong> • A&T Precision Detailing</a>
+              <a href="https://www.instagram.com/ATprecisiondetail/" class="social-pill"><strong>Instagram</strong> • @ATprecisiondetail</a>
+              <a href="https://www.tiktok.com/@atprecisiondetailing" class="social-pill"><strong>TikTok</strong> • @atprecisiondetailing</a>
+              <a href="https://www.facebook.com/Atprecisiondetailing/" class="social-pill"><strong>Facebook</strong> • A&T Precision Detailing</a>
+              <a href="https://api.whatsapp.com/send?phone=7252901829" class="social-pill"><strong>WhatsApp</strong> • Chat with us</a>
             </div>
+          </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <p style="opacity:0.85; line-height:1.8; margin:10px 0 0 0;">
-
-            <span style="color:#D4AF37;">•</span>
-            <span class="tooltip">Includes Everything in the Interior Detail
-                <span class="tooltiptext">
-                    Every service from our Interior Detail is included before deep-cleaning begins.
-                </span>
-            </span><br>
-
-            <span style="color:#D4AF37;">•</span>
-            <span class="tooltip">Full Stain Treatment
-                <span class="tooltiptext">
-                    Targets spills, food stains, mud, and stubborn spots. Many stains improve greatly, but full removal isn't always guaranteed.
-                </span>
-            </span><br>
-
-            <span style="color:#D4AF37;">•</span>
-            <span class="tooltip">Seats & Carpets Shampooed
-                <span class="tooltiptext">
-                    Deep extraction removes embedded dirt, stains, and odors from fabric seats and carpets.
-                </span>
-            </span><br>
-
-            <span style="color:#D4AF37;">•</span>
-            <span class="tooltip">Steam Sanitization
-                <span class="tooltiptext">
-                    High-temperature steam sanitizes surfaces and breaks down grease, grime, and bacteria in hard-to-reach areas.
-                </span>
-            </span>
-
+  <!-- GALLERY -->
+  <section id="gallery" class="section">
+    <div class="section-header">
+      <div>
+        <h3 class="section-title"><span>Gallery</span> Recent Work</h3>
+        <p class="section-subtitle">
+          A quick look at the kind of results we deliver. Swap these images with your own before/after shots
+          to showcase your best work.
         </p>
-
-        <hr style="border:0; border-top:1px solid #333; margin:20px 0 0 0;">
+      </div>
+      <div class="section-tagline">
+        Pro tip: feature at least one interior, one exterior, and one “problem solved” (stains, headlights, trim).
+      </div>
     </div>
 
-    <!-- INTERIOR ADD-ONS -->
-    <div style="margin-bottom:40px;">
-        <h3 style="color:#D4AF37; font-size:22px; margin-bottom:20px;">Interior Add‑Ons</h3>
-
-        <div style="display:flex; flex-direction:column; gap:14px;">
-
-            <div style="display:flex; gap:20px;">
-                <span style="color:#D4AF37; font-weight:700;">$40+</span>
-                <span class="tooltip">Stain Treatment
-                    <span class="tooltiptext">
-                        Professional stain removal for isolated spots caused by food, drinks, mud, grease, and other contaminants.
-                    </span>
-                </span>
-            </div>
-
-            <div style="display:flex; gap:20px;">
-                <span style="color:#D4AF37; font-weight:700;">$40+</span>
-                <span class="tooltip">Seat Shampoo
-                    <span class="tooltiptext">
-                        Deep cleans fabric seats using extraction to remove embedded dirt, stains, and odors.
-                    </span>
-                </span>
-            </div>
-
-            <div style="display:flex; gap:20px;">
-                <span style="color:#D4AF37; font-weight:700;">$40+</span>
-                <span class="tooltip">Carpet Shampoo
-                    <span class="tooltiptext">
-                        Deep extraction cleaning removes dirt, stains, and trapped debris while helping eliminate odors.
-                    </span>
-                </span>
-            </div>
-
-            <div style="display:flex; gap:20px;">
-                <span style="color:#D4AF37; font-weight:700;">$40+</span>
-                <span class="tooltip">Pet Hair Removal
-                    <span class="tooltiptext">
-                        Removes stubborn embedded pet hair using specialized brushes and tools. Pricing varies by amount of hair.
-                    </span>
-                </span>
-            </div>
-
-            <div style="display:flex; gap:20px;">
-                <span style="color:#D4AF37; font-weight:700;">$10</span>
-                <span class="tooltip">Leather Conditioning
-                    <span class="tooltiptext">
-                        Moisturizes and protects leather surfaces to prevent cracking, fading, and UV damage.
-                    </span>
-                </span>
-            </div>
-
+    <div class="gallery">
+      <div class="gallery-track" id="galleryTrack">
+        <!-- Slide 1 -->
+        <div class="gallery-slide" style="background-image:url('https://images.pexels.com/photos/4870700/pexels-photo-4870700.jpeg?auto=compress&cs=tinysrgb&w=1200');">
+          <div class="gallery-caption">Full Detail — interior & exterior reset on a daily driver.</div>
         </div>
-    </div>
-
-    <!-- EXTERIOR ADD-ONS -->
-    <div style="margin-bottom:20px;">
-        <h3 style="color:#D4AF37; font-size:22px; margin-bottom:20px;">Exterior Add‑Ons</h3>
-
-        <div style="display:flex; flex-direction:column; gap:14px;">
-
-            <div style="display:flex; gap:20px;">
-                <span style="color:#D4AF37; font-weight:700;">$80</span>
-                <span class="tooltip">Headlight Restoration
-                    <span class="tooltiptext">
-                        Removes oxidation and yellowing from cloudy headlights to improve appearance and nighttime visibility. Adds 1 year of UV protection.
-                    </span>
-                </span>
-            </div>
-
-            <div style="display:flex; gap:20px;">
-                <span style="color:#D4AF37; font-weight:700;">$50+</span>
-                <span class="tooltip">Trim Restoration
-                    <span class="tooltiptext">
-                        Restores faded exterior plastic trim while adding 1 year of UV protection to keep it darker and newer longer.
-                    </span>
-                </span>
-            </div>
-
-            <div style="display:flex; gap:20px;">
-                <span style="color:#D4AF37; font-weight:700;">$60</span>
-                <span class="tooltip">Hand Wax & Paint Decon
-                    <span class="tooltiptext">
-                        Clay bar removes bonded contaminants, prepping paint for hand-applied ceramic wax. Adds months of hydrophobic protection and shine. Must be done indoors and cure 12–24 hours.
-                    </span>
-                </span>
-            </div>
-
+        <!-- Slide 2 -->
+        <div class="gallery-slide" style="background-image:url('https://images.pexels.com/photos/4870701/pexels-photo-4870701.jpeg?auto=compress&cs=tinysrgb&w=1200');">
+          <div class="gallery-caption">Exterior Detail — foam wash, wheels, tires, and ceramic spray protection.</div>
         </div>
+        <!-- Slide 3 -->
+        <div class="gallery-slide" style="background-image:url('https://images.pexels.com/photos/4870702/pexels-photo-4870702.jpeg?auto=compress&cs=tinysrgb&w=1200');">
+          <div class="gallery-caption">Interior Detail — deep vacuum, steam cleaning, and UV protection.</div>
+        </div>
+      </div>
+      <div class="gallery-controls">
+        <button class="gallery-btn" type="button" onclick="prevSlide()">‹</button>
+        <button class="gallery-btn" type="button" onclick="nextSlide()">›</button>
+      </div>
     </div>
+  </section>
+
+  <!-- QUOTE FORM -->
+  <section id="quote" class="section">
+    <div class="section-header">
+      <div>
+        <h3 class="section-title"><span>Get a Fast, Easy Quote</span></h3>
+        <p class="section-subtitle">
+          Tell us a bit about your vehicle and what you’re looking for. We’ll respond with a clear quote and
+          available appointment times. You can also text photos directly to <strong>(725) 290-1829</strong>.
+        </p>
+      </div>
+      <div class="section-tagline">
+        No hidden fees. No surprises. Just honest pricing and premium-level results.
+      </div>
+    </div>
+
+    <div class="form-card">
+      <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input id="name" name="Full Name" type="text" class="form-input" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="Email" type="email" class="form-input" placeholder="Email Address" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input id="phone" name="Phone" type="tel" class="form-input" placeholder="725-290-1829" value="725-290-1829">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="vehicle">Year / Make / Model</label>
+            <input id="vehicle" name="Vehicle" type="text" class="form-input" placeholder="2021 Corvette Stingray">
+          </div>
+          <div class="form-group">
+            <label for="service">Service</label>
+            <select id="service" name="Service" class="form-select" required>
+              <option value="">- Select -</option>
+              <option value="Full Detail">Full Detail</option>
+              <option value="Exterior Detail">Exterior Detail</option>
+              <option value="Interior Detail">Interior Detail</option>
+              <option value="Headlight Restoration">Headlight Restoration</option>
+              <option value="Add-Ons">Add-Ons (Shampoo, Clay Bar, Trim Restoration)</option>
+              <option value="Maintenance Detail">Maintenance Detail</option>
+              <option value="Fleet / Multiple Vehicles">Fleet / Multiple Vehicles</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="details">Details</label>
+          <textarea id="details" name="Details" class="form-textarea" placeholder="Feel free to ask any question you may have, or describe the condition of your vehicle."></textarea>
+        </div>
+
+        <div class="form-footer">
+          <button type="submit" class="btn btn-primary">Request Quote</button>
+          <a href="tel:7252901829" class="btn btn-outline">Call / Text (725) 290-1829</a>
+          <span>Customer power & water required for all appointments.</span>
+          <span>Serving Henderson, Boulder City, Las Vegas & Southern Nevada.</span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-row">
+        <span>© <span id="year"></span> A&T Precision Detailing</span>
+        <span>Owner-operated mobile detailing • Henderson, NV</span>
+      </div>
+      <div class="footer-row">
+        <span><a href="tel:7252901829">Call/Text: (725) 290-1829</a></span>
+        <span><a href="#quote">Book Online</a></span>
+        <span><a href="#reviews">View Reviews</a></span>
+      </div>
+    </div>
+  </footer>
 
 </div>
 
-<!-- ========================= -->
-<!--   WHY CHOOSE A&T SECTION  -->
-<!-- ========================= -->
+<script>
+  // Year in footer
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-<h2 style="color:#D4AF37; text-align:center; margin:60px 0 30px 0; font-size:32px; letter-spacing:1px;">
-    Why Choose A&T?
-</h2>
+  // Simple gallery slider
+  let currentSlide = 0;
+  const track = document.getElementById('galleryTrack');
+  const slides = document.querySelectorAll('.gallery-slide');
 
-<div style="
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:25px;
-    max-width:1100px;
-    margin:0 auto 60px auto;
-">
+  function updateGallery() {
+    const offset = -currentSlide * 100;
+    track.style.transform = 'translateX(' + offset + '%)';
+  }
 
-    <!-- BOX 1 -->
-    <div style="
-        background:#111;
-        border:1px solid #2a2a2a;
-        border-radius:12px;
-        padding:25px;
-        width:240px;
-        text-align:center;
-        color:white;
-    ">
-        <div style="color:#D4AF37; font-size:20px; font-weight:700; margin-bottom:10px;">
-            Owner Operated
-        </div>
-        <div style="opacity:0.85; font-size:15px; line-height:1.5;">
-            You deal directly with the owner from booking to final walkthrough.
-        </div>
-    </div>
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    updateGallery();
+  }
 
-    <!-- BOX 2 -->
-    <div style="
-        background:#111;
-        border:1px solid #2a2a2a;
-        border-radius:12px;
-        padding:25px;
-        width:240px;
-        text-align:center;
-        color:white;
-    ">
-        <div style="color:#D4AF37; font-size:20px; font-weight:700; margin-bottom:10px;">
-            Premium Products & Service
-        </div>
-        <div style="opacity:0.85; font-size:15px; line-height:1.5;">
-            We use professional chemicals & safe detailing techniques.<br><br>
-            We never take shortcuts — every vehicle is treated like our own.
-        </div>
-    </div>
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    updateGallery();
+  }
 
-    <!-- BOX 3 -->
-    <div style="
-        background:#111;
-        border:1px solid #2a2a2a;
-        border-radius:12px;
-        padding:25px;
-        width:240px;
-        text-align:center;
-        color:white;
-    ">
-        <div style="color:#D4AF37; font-size:20px; font-weight:700; margin-bottom:10px;">
-            Mobile Service
-        </div>
-        <div style="opacity:0.85; font-size:15px; line-height:1.5;">
-            We come to you.<br><br>
-            <b>Customer power & water required for all appointments.</b>
-        </div>
-    </div>
+  // Auto-advance gallery every 7 seconds
+  setInterval(nextSlide, 7000);
 
-    <!-- BOX 4 -->
-    <div style="
-        background:#111;
-        border:1px solid #2a2a2a;
-        border-radius:12px;
-        padding:25px;
-        width:240px;
-        text-align:center;
-        color:white;
-    ">
-        <div style="color:#D4AF37; font-size:20px; font-weight:700; margin-bottom:10px;">
-            Transparent Pricing
-        </div>
-        <div style="opacity:0.85; font-size:15px; line-height:1.5;">
-            No hidden fees.<br>
-            No surprises.
-        </div>
-    </div>
+  // Smooth scroll for internal links
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href').substring(1);
+      const target = document.getElementById(targetId);
+      if (target) {
+        e.preventDefault();
+        window.scrollTo({
+          top: target.offsetTop - 80,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
+</body>
+</html>
 
-</div>
-
-    <!-- ========================= -->
-<!--   ABOUT / SERVICE SUMMARY -->
-<!-- ========================= -->
-
-<div style="
-    max-width:900px;
-    margin:60px auto 40px auto;
-    padding:20px;
-    color:white;
-    font-family:Arial, sans-serif;
-    line-height:1.7;
-    font-size:16px;
-    opacity:0.9;
-    text-align:center;
-">
-    A&T Precision Detailing provides premium mobile auto detailing services throughout Henderson, Boulder City, Las Vegas, and surrounding Southern Nevada communities. 
-    Our professional detailing services include interior detailing, exterior detailing, full detail packages, ceramic spray protection, hydrophobic glass protection, clay bar paint decontamination, stain removal, steam cleaning, headlight restoration, trim restoration, leather conditioning, pet hair removal, and maintenance detailing for cars, trucks, SUVs, RVs, vans, and fleet vehicles. 
-    Whether you're at home, work, or your business, we bring professional mobile detailing directly to your location, saving you time while delivering premium results. 
-    Customer power and water are required for all appointments.
-</div>
-    <div style="text-align:center; margin-bottom:60px;">
-    <a href="tel:7252901829" style="
-        display:inline-block;
-        background:#D4AF37;
-        color:black;
-        padding:14px 28px;
-        border-radius:8px;
-        font-size:18px;
-        font-weight:700;
-        text-decoration:none;
-        letter-spacing:0.5px;
-    ">
-        Call / Text (725) 290‑1829
-    </a>
-</div>
-
-
-<div style="
-    max-width:900px;
-    margin:0 auto 30px auto;
-    padding:10px;
-    color:#D4AF37;
-    font-family:Arial, sans-serif;
-    font-size:13px;
-    opacity:0.75;
-    text-align:center;
-">
-    A&T Precision Detailing provides premium mobile auto detailing services throughout Henderson, Boulder City, Las Vegas, Green Valley, Seven Hills, Anthem, Inspirada, Silverado Ranch, Whitney Ranch, and surrounding Southern Nevada communities.
-</div>

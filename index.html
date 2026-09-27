@@ -1,253 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>A&T Precision Detailing | Henderson Mobile Detailing</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="Premium owner-operated mobile detailing serving Henderson, Las Vegas, and Boulder City. Interior, exterior, full details, ceramic spray, headlight restoration.">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>Precision Detailing | Henderson, NV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Premium mobile detailing in Henderson, NV. Phone-first, hassle-free booking, owner-operated." />
 
-<style>
-  body {
-    margin: 0;
-    font-family: Poppins, sans-serif;
-    background: #0a0a0a;
-    color: #fff;
-    line-height: 1.6;
-  }
-  a { color: inherit; text-decoration: none; }
-  header {
-    padding: 1rem 2rem;
-    border-bottom: 1px solid rgba(212,175,55,0.3);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #0a0a0a;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
-  .brand { font-weight: 700; font-size: 1.1rem; letter-spacing: .05em; }
-  .btn {
-    background: #d4af37;
-    color: #000;
-    padding: .6rem 1.2rem;
-    border-radius: 50px;
-    font-weight: 600;
-    display: inline-block;
-  }
-  .section {
-    padding: 3rem 2rem;
-    max-width: 900px;
-    margin: auto;
-  }
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #d4af37;
-  }
-  .hero {
-    text-align: center;
-    padding: 4rem 2rem;
-  }
-  .hero p {
-    max-width: 600px;
-    margin: auto;
-    color: #ccc;
-  }
-  .services {
-    display: grid;
-    gap: 1rem;
-  }
-  .card {
-    background: #111;
-    padding: 1.5rem;
-    border-radius: 10px;
-    border: 1px solid rgba(212,175,55,0.25);
-  }
-  .card h3 {
-    margin: 0 0 .5rem;
-    color: #d4af37;
-  }
-  .gallery {
-    overflow: hidden;
-    border-radius: 10px;
-    border: 1px solid rgba(212,175,55,0.25);
-  }
-  .gallery img {
-    width: 100%;
-    display: block;
-  }
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
 
-  /* ⭐ Reviews Section Styling */
-  .reviews-container {
-    background: #111;
-    border: 1px solid rgba(212,175,55,0.25);
-    border-radius: 12px;
-    padding: 2rem;
-    margin-top: 1rem;
-    box-shadow: 0 0 25px rgba(0,0,0,0.4);
-  }
-  .reviews-container h3 {
-    color: #d4af37;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-
-  /* ⭐ Form */
-  form {
-    background: #111;
-    padding: 2rem;
-    border-radius: 10px;
-    border: 1px solid rgba(212,175,55,0.25);
-  }
-  input, select, textarea {
-    width: 100%;
-    padding: .7rem;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-    border: 1px solid rgba(212,175,55,0.4);
-    background: #0a0a0a;
-    color: #fff;
-  }
-
-  /* ⭐ Sticky Text Button */
-  .sticky-text-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #d4af37;
-    color: #000;
-    padding: 0.8rem 1.4rem;
-    border-radius: 50px;
-    font-weight: 600;
-    box-shadow: 0 0 15px rgba(0,0,0,0.4);
-    z-index: 9999;
-  }
-  .sticky-text-btn:hover {
-    filter: brightness(1.1);
-  }
-
-  footer {
-    text-align: center;
-    padding: 2rem;
-    border-top: 1px solid rgba(212,175,55,0.3);
-    color: #ccc;
-  }
-</style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-
-<header>
-  <div class="brand">A&T Precision Detailing</div>
-  <a href="#quote" class="btn">Get Quote</a>
-</header>
-
-<section class="hero">
-  <h2>Premium Mobile Detailing</h2>
-  <p>Owner-operated mobile detailing serving Henderson, Las Vegas, Boulder City & surrounding areas. We come to you — customer power & water required.</p>
-  <br>
-  <a href="#quote" class="btn">Book / Request Quote</a>
-</section>
-
-<section class="section">
-  <h2>Services</h2>
-  <div class="services">
-
-    <div class="card">
-      <h3>Full Detail</h3>
-      <p>Complete interior & exterior reset.</p>
-      <p><strong>Cars $140 • SUVs/Trucks $190</strong></p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-mark">PD</span>
+        <div class="brand-text">
+          <span class="brand-name">Precision Detailing</span>
+          <span class="brand-tagline">Owner-operated • Henderson, NV</span>
+        </div>
+      </div>
+      <a href="#contact" class="header-cta">Book now</a>
     </div>
+  </header>
 
-    <div class="card">
-      <h3>Exterior Detail</h3>
-      <p>Foam wash, wheels, tires, glass, ceramic spray protection.</p>
-      <p><strong>Cars $80 • SUVs/Trucks $100</strong></p>
+  <main>
+    <!-- Hero -->
+    <section class="section hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Premium mobile detailing, built around your schedule.</h1>
+          <p>
+            We come to you—home, work, or anywhere in Henderson. Phone-first booking,
+            clear pricing, and meticulous results every time.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Request an appointment</a>
+            <a href="#services" class="btn btn-ghost">View services</a>
+          </div>
+          <div class="hero-meta">
+            <span>• Mobile-only service</span>
+            <span>• Interior & exterior packages</span>
+            <span>• Duo-run by Troy & Ari</span>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-header">
+            <span class="hero-card-title">Today’s availability</span>
+            <span class="hero-card-status">Limited slots</span>
+          </div>
+          <ul class="hero-card-list">
+            <li>
+              <span>Morning</span>
+              <span>Booked</span>
+            </li>
+            <li>
+              <span>Afternoon</span>
+              <span>1–2 slots</span>
+            </li>
+            <li>
+              <span>Evening</span>
+              <span>Flexible</span>
+            </li>
+          </ul>
+          <p class="hero-card-note">
+            Text or submit the form and we’ll confirm your time within minutes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Services built for real daily drivers.</h2>
+          <p>Clear packages, no upsell games, just honest detailing that makes your car feel new again.</p>
+        </div>
+
+        <div class="grid services-grid">
+          <article class="card service-card">
+            <h3>Essential Exterior</h3>
+            <p class="service-desc">
+              Hand wash, wheel & tire cleaning, basic bug removal, and streak-free glass.
+            </p>
+            <ul class="service-list">
+              <li>Foam pre-soak & two-bucket wash</li>
+              <li>Wheel faces & tires cleaned</li>
+              <li>Exterior glass cleaned</li>
+            </ul>
+            <div class="service-meta">
+              <span class="price">From $60</span>
+              <span class="duration">~60–90 minutes</span>
+            </div>
+          </article>
+
+          <article class="card service-card">
+            <h3>Interior Refresh</h3>
+            <p class="service-desc">
+              Perfect for daily drivers—vacuum, wipe-down, and glass for a clean, reset feel.
+            </p>
+            <ul class="service-list">
+              <li>Full interior vacuum</li>
+              <li>Surfaces wiped & dusted</li>
+              <li>Interior glass cleaned</li>
+            </ul>
+            <div class="service-meta">
+              <span class="price">From $80</span>
+              <span class="duration">~90–120 minutes</span>
+            </div>
+          </article>
+
+          <article class="card service-card">
+            <h3>Full Detail</h3>
+            <p class="service-desc">
+              Inside and out—our most popular package for selling, gifting, or just treating yourself.
+            </p>
+            <ul class="service-list">
+              <li>Essential Exterior + Interior Refresh</li>
+              <li>Door jambs & touch points</li>
+              <li>Light stain treatment</li>
+            </ul>
+            <div class="service-meta">
+              <span class="price">From $160</span>
+              <span class="duration">~3–4 hours</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section section-alt">
+      <div class="container about-inner">
+        <div class="about-text">
+          <h2>Owner-operated, not a franchise.</h2>
+          <p>
+            Precision Detailing is run by Troy & Ari—just the two of us, working directly
+            with you. No call centers, no random techs showing up. When you book, you know
+            exactly who’s touching your car.
+          </p>
+          <p>
+            We focus on Henderson and nearby areas so we can show up on time, remember your
+            preferences, and keep your car looking consistently dialed in.
+          </p>
+        </div>
+        <div class="about-card card">
+          <h3>What you can expect</h3>
+          <ul class="about-list">
+            <li>On-time arrivals and clear communication</li>
+            <li>Phone-first booking and confirmations</li>
+            <li>Respect for your driveway, home, and time</li>
+            <li>Real humans, not a rotating crew</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing summary -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Simple pricing, no surprise add-ons.</h2>
+          <p>Final price depends on size and condition, but we keep everything transparent.</p>
+        </div>
+
+        <div class="grid pricing-grid">
+          <div class="card pricing-card">
+            <h3>Compact / Sedan</h3>
+            <p>Ideal for daily commuters and family cars.</p>
+            <ul class="pricing-list">
+              <li>Essential Exterior: $60–$80</li>
+              <li>Interior Refresh: $80–$110</li>
+              <li>Full Detail: $160–$210</li>
+            </ul>
+          </div>
+
+          <div class="card pricing-card">
+            <h3>SUV / Truck</h3>
+            <p>More surface area, more attention to detail.</p>
+            <ul class="pricing-list">
+              <li>Essential Exterior: $80–$110</li>
+              <li>Interior Refresh: $100–$140</li>
+              <li>Full Detail: $190–$260</li>
+            </ul>
+          </div>
+
+          <div class="card pricing-card">
+            <h3>Extras</h3>
+            <p>Optional add-ons for when you want that little bit more.</p>
+            <ul class="pricing-list">
+              <li>Pet hair removal</li>
+              <li>Heavy stain treatment</li>
+              <li>Engine bay wipe-down</li>
+            </ul>
+            <p class="pricing-note">Quoted after a quick walk-around or photos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / Booking -->
+    <section id="contact" class="section section-alt">
+      <div class="container contact-inner">
+        <div class="contact-text">
+          <h2>Ready to book your detail?</h2>
+          <p>
+            Send us a quick request with your car, location, and preferred time. We’ll text
+            you back to confirm and lock in your slot.
+          </p>
+          <div class="contact-meta">
+            <span>Serving Henderson, NV and nearby areas</span>
+            <span>Text-friendly communication</span>
+          </div>
+        </div>
+
+        <form class="card contact-form" action="#" method="post">
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+          </div>
+
+          <div class="form-row">
+            <label for="phone">Phone number</label>
+            <input id="phone" name="phone" type="tel" placeholder="(702) ••• ••••" required />
+          </div>
+
+          <div class="form-row">
+            <label for="vehicle">Vehicle</label>
+            <input id="vehicle" name="vehicle" type="text" placeholder="Year, make, model" required />
+          </div>
+
+          <div class="form-row">
+            <label for="service">Preferred service</label>
+            <select id="service" name="service" required>
+              <option value="">Select a service</option>
+              <option value="exterior">Essential Exterior</option>
+              <option value="interior">Interior Refresh</option>
+              <option value="full">Full Detail</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Notes</label>
+            <textarea id="message" name="message" rows="3" placeholder="Location, preferred day/time, anything we should know."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary full-width">Submit request</button>
+          <p class="form-note">
+            This form doesn’t send yet—once you’re ready, we can hook it to email or a form service.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Precision Detailing • Henderson, NV</span>
+      <span>Built phone-first for local clients.</span>
     </div>
+  </footer>
 
-    <div class="card">
-      <h3>Interior Detail</h3>
-      <p>Vacuum, wipe-down, mats, glass, steam, UV protection.</p>
-      <p><strong>Cars $100 • SUVs/Trucks $130</strong></p>
-    </div>
-
-    <div class="card">
-      <h3>Headlight Restoration</h3>
-      <p><strong>1 Light $60 • 2 Lights $80</strong></p>
-    </div>
-
-    <div class="card">
-      <h3>Add-Ons</h3>
-      <p>Shampoo & extraction $100+<br>Clay bar & wax $50+<br>Trim restoration $50+</p>
-    </div>
-
-  </div>
-</section>
-
-<section class="section">
-  <h2>Verified Google Reviews</h2>
-
-  <div class="reviews-container">
-    <h3>What Our Customers Say</h3>
-
-    <!-- ⭐⭐⭐ YOUR ELFSIGHT GOOGLE REVIEWS WIDGET ⭐⭐⭐ -->
-    <!-- Elfsight Google Reviews | A&T Precision Detailing Verified Google Reviews -->
-    <script src="https://elfsightcdn.com/platform.js" async></script>
-    <div class="elfsight-app-31a76736-7259-4f4d-9ae6-2858cbca062f" data-elfsight-app-lazy></div>
-
-  </div>
-</section>
-
-<section class="section">
-  <h2>Gallery</h2>
-  <div class="gallery">
-    <img src="https://images.pexels.com/photos/4870700/pexels-photo-4870700.jpeg?auto=compress&cs=tinysrgb&w=1200">
-    <img src="https://images.pexels.com/photos/4870701/pexels-photo-4870701.jpeg?auto=compress&cs=tinysrgb&w=1200">
-    <img src="https://images.pexels.com/photos/4870702/pexels-photo-4870702.jpeg?auto=compress&cs=tinysrgb&w=1200">
-  </div>
-</section>
-
-<section id="quote" class="section">
-  <h2>Request a Quote</h2>
-
-  <form action="https://formspree.io/f/moeabrwz" method="POST">
-
-    <input type="text" name="name" placeholder="Full Name" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <input type="tel" name="phone" placeholder="Phone Number" value="725-290-1829">
-
-    <input type="text" name="vehicle" placeholder="Year / Make / Model">
-
-    <select name="service" required>
-      <option value="">Select Service</option>
-      <option>Full Detail</option>
-      <option>Exterior Detail</option>
-      <option>Interior Detail</option>
-      <option>Headlight Restoration</option>
-      <option>Add-Ons</option>
-      <option>Maintenance Detail</option>
-      <option>Fleet / Multiple Vehicles</option>
-    </select>
-
-    <textarea name="details" placeholder="Describe your vehicle or ask any questions"></textarea>
-
-    <button class="btn" type="submit">Send Quote Request</button>
-  </form>
-</section>
-
-<footer>
-  © <span id="year"></span> A&T Precision Detailing • Henderson, NV  
-  <br>Call/Text: (725) 290-1829
-</footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
-<!-- ⭐ Sticky Text Button -->
-<a href="https://api.whatsapp.com/send?phone=7252901829" class="sticky-text-btn">Text Us</a>
-
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

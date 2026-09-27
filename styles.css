@@ -1,10 +1,11 @@
+/* styles.css */
 :root {
   --bg: #f7f7f7;
   --bg-alt: #ffffff;
-  --text: #111111;
-  --muted: #666666;
+  --text: #111;
+  --muted: #666;
   --border: #e2e2e2;
-  --accent: #c89b3c; /* soft gold */
+  --accent: #c89b3c;
   --accent-soft: rgba(200, 155, 60, 0.12);
   --radius-card: 18px;
   --radius-pill: 999px;
@@ -15,9 +16,7 @@
 
 *,
 *::before,
-*::after {
-  box-sizing: border-box;
-}
+*::after { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -31,17 +30,9 @@ h1, h2, h3 {
   margin: 0 0 12px;
 }
 
-p {
-  margin: 0 0 12px;
-  color: var(--muted);
-}
+p { margin: 0 0 12px; color: var(--muted); }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-/* Layout */
+a { color: inherit; text-decoration: none; }
 
 .container {
   width: 100%;
@@ -50,28 +41,10 @@ a {
   padding: 0 20px;
 }
 
-.section {
-  padding: var(--section-padding) 0;
-}
+.section { padding: var(--section-padding) 0; }
+.section-alt { background: var(--bg-alt); }
 
-.section-alt {
-  background: var(--bg-alt);
-}
-
-.section-header {
-  max-width: 640px;
-  margin-bottom: 32px;
-}
-
-.section-header h2 {
-  font-size: 1.9rem;
-}
-
-.section-header p {
-  font-size: 0.98rem;
-}
-
-/* Header */
+.section-header { max-width: 640px; margin-bottom: 32px; }
 
 .site-header {
   position: sticky;
@@ -89,11 +62,7 @@ a {
   padding: 14px 0;
 }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
+.brand { display: flex; align-items: center; gap: 12px; }
 
 .brand-mark {
   width: 34px;
@@ -107,20 +76,9 @@ a {
   font-size: 0.9rem;
 }
 
-.brand-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.brand-name {
-  font-weight: 600;
-  font-size: 0.98rem;
-}
-
-.brand-tagline {
-  font-size: 0.8rem;
-  color: var(--muted);
-}
+.brand-text { display: flex; flex-direction: column; }
+.brand-name { font-weight: 600; font-size: 0.98rem; }
+.brand-tagline { font-size: 0.8rem; color: var(--muted); }
 
 .header-cta {
   padding: 8px 16px;
@@ -129,39 +87,17 @@ a {
   font-size: 0.85rem;
 }
 
-/* Hero */
+.hero { background: var(--bg-alt); }
 
-.hero {
-  background: var(--bg-alt);
-}
+.hero-inner { display: grid; gap: 32px; }
 
-.hero-inner {
-  display: grid;
-  gap: 32px;
-}
-
-.hero-text h1 {
-  font-size: 2.2rem;
-  line-height: 1.1;
-}
-
-.hero-text p {
-  font-size: 0.98rem;
-}
+.hero-text h1 { font-size: 2.2rem; line-height: 1.1; }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   margin: 18px 0;
-}
-
-.hero-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  font-size: 0.85rem;
-  color: var(--muted);
 }
 
 .hero-card {
@@ -179,36 +115,22 @@ a {
   margin-bottom: 12px;
 }
 
-.hero-card-title {
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-.hero-card-status {
-  font-size: 0.8rem;
-  color: var(--accent);
-}
+.hero-card-title { font-size: 0.9rem; font-weight: 600; }
+.hero-card-status { font-size: 0.8rem; color: var(--accent); }
 
 .hero-card-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 10px;
+  margin: 0;
+  font-size: 0.85rem;
 }
 
 .hero-card-list li {
   display: flex;
   justify-content: space-between;
-  font-size: 0.85rem;
   padding: 6px 0;
   border-bottom: 1px dashed rgba(0, 0, 0, 0.04);
 }
-
-.hero-card-note {
-  font-size: 0.8rem;
-  color: var(--muted);
-}
-
-/* Buttons */
 
 .btn {
   display: inline-flex;
@@ -233,15 +155,7 @@ a {
   background: #fff;
 }
 
-.btn:hover {
-  opacity: 0.9;
-}
-
-.full-width {
-  width: 100%;
-}
-
-/* Cards & grids */
+.full-width { width: 100%; }
 
 .card {
   background: var(--bg-alt);
@@ -251,152 +165,29 @@ a {
   box-shadow: var(--shadow-soft);
 }
 
-.grid {
-  display: grid;
-  gap: 18px;
-}
+.grid { display: grid; gap: 18px; }
 
-/* Services */
+.services-grid { grid-template-columns: 1fr; }
 
-.services-grid {
-  grid-template-columns: 1fr;
-}
+.about-inner { display: grid; gap: 24px; }
 
-.service-card h3 {
-  font-size: 1.1rem;
-}
+.pricing-grid { grid-template-columns: 1fr; }
 
-.service-desc {
-  font-size: 0.9rem;
-}
+.contact-inner { display: grid; gap: 24px; }
 
-.service-list {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0 0;
-  font-size: 0.85rem;
-}
+.contact-form { display: flex; flex-direction: column; gap: 12px; }
 
-.service-list li {
-  margin-bottom: 4px;
-}
+.form-row { display: flex; flex-direction: column; gap: 4px; }
 
-.service-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 12px;
-  font-size: 0.85rem;
-}
+label { font-size: 0.8rem; color: var(--muted); }
 
-.price {
-  font-weight: 600;
-}
-
-.duration {
-  color: var(--muted);
-}
-
-/* About */
-
-.about-inner {
-  display: grid;
-  gap: 24px;
-}
-
-.about-text p {
-  font-size: 0.95rem;
-}
-
-.about-list {
-  list-style: none;
-  padding: 0;
-  margin: 8px 0 0;
-  font-size: 0.85rem;
-}
-
-.about-list li {
-  margin-bottom: 6px;
-}
-
-/* Pricing */
-
-.pricing-grid {
-  grid-template-columns: 1fr;
-}
-
-.pricing-card h3 {
-  font-size: 1.05rem;
-}
-
-.pricing-list {
-  list-style: none;
-  padding: 0;
-  margin: 8px 0 0;
-  font-size: 0.85rem;
-}
-
-.pricing-list li {
-  margin-bottom: 4px;
-}
-
-.pricing-note {
-  font-size: 0.8rem;
-  color: var(--muted);
-}
-
-/* Contact */
-
-.contact-inner {
-  display: grid;
-  gap: 24px;
-}
-
-.contact-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  font-size: 0.85rem;
-  color: var(--muted);
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.form-row {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-label {
-  font-size: 0.8rem;
-  color: var(--muted);
-}
-
-input,
-select,
-textarea {
+input, select, textarea {
   font: inherit;
   padding: 8px 10px;
   border-radius: 10px;
   border: 1px solid var(--border);
   background: #fff;
 }
-
-textarea {
-  resize: vertical;
-}
-
-.form-note {
-  font-size: 0.78rem;
-  color: var(--muted);
-}
-
-/* Footer */
 
 .site-footer {
   padding: 18px 0 24px;
@@ -412,8 +203,6 @@ textarea {
   color: var(--muted);
 }
 
-/* Responsive */
-
 @media (min-width: 768px) {
   .hero-inner {
     grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
@@ -426,7 +215,6 @@ textarea {
 
   .about-inner {
     grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-    align-items: start;
   }
 
   .pricing-grid {
@@ -435,7 +223,6 @@ textarea {
 
   .contact-inner {
     grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-    align-items: start;
   }
 
   .footer-inner {

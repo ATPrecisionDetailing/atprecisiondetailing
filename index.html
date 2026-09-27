@@ -11,150 +11,308 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Top nav -->
   <header class="site-header">
     <div class="container header-inner">
-      <div class="brand">
-        <span class="brand-mark">AT</span>
-        <div class="brand-text">
-          <span class="brand-name">A&T Precision Detailing</span>
-          <span class="brand-tagline">Mobile detailing • Henderson, NV</span>
-        </div>
+      <div class="logo">
+        <span class="logo-mark">A&T</span>
+        <span class="logo-text">A&T Precision Detailing</span>
       </div>
-      <a href="#contact" class="header-cta">Book now</a>
+      <nav class="nav">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#area">Area</a>
+        <a href="#about">About</a>
+        <span class="nav-phone">(725) 290-1829</span>
+        <a href="#book" class="nav-book">Book</a>
+      </nav>
     </div>
   </header>
 
   <main>
-    <section class="section hero">
+    <!-- HERO -->
+    <section class="section hero" id="top">
       <div class="container hero-inner">
         <div class="hero-text">
-          <h1>Precision detailing, built around your schedule.</h1>
-          <p>We come to you—home, work, or anywhere in Henderson. Phone-first booking and meticulous results.</p>
+          <p class="hero-kicker">HENDERSON'S TRUSTED MOBILE DETAILER</p>
+          <h1>Premium mobile detailing. We come to you.</h1>
+          <p>
+            Professional mobile auto detailing in Henderson, NV and the surrounding Las Vegas communities,
+            bringing high-quality detailing & headlight restorations to your driveway.
+          </p>
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Request an appointment</a>
-            <a href="#services" class="btn btn-ghost">View services</a>
+            <a href="#book" class="btn btn-primary">Book your detail</a>
+            <a href="#pricing" class="btn btn-outline">See prices</a>
           </div>
+          <p class="hero-strip">
+            $140 Full Detail &nbsp;|&nbsp; $80 Exterior &nbsp;|&nbsp; $60 Headlight
+          </p>
         </div>
-        <div class="hero-card">
-          <div class="hero-card-header">
-            <span class="hero-card-title">Today’s availability</span>
-            <span class="hero-card-status">Limited slots</span>
-          </div>
-          <ul class="hero-card-list">
-            <li><span>Morning</span><span>Booked</span></li>
-            <li><span>Afternoon</span><span>1–2 slots</span></li>
-            <li><span>Evening</span><span>Flexible</span></li>
-          </ul>
+        <div class="hero-image">
+          <!-- YOUR HERO IMAGE HERE -->
+          <div class="image-placeholder">YOUR HERO IMAGE HERE</div>
         </div>
       </div>
     </section>
 
-    <section id="services" class="section">
+    <!-- SERVICES / MENU SUMMARY -->
+    <section class="section" id="services">
       <div class="container">
-        <div class="section-header">
-          <h2>Services</h2>
-          <p>Clear packages for real daily drivers.</p>
-        </div>
-        <div class="grid services-grid">
-          <article class="card service-card">
-            <h3>Essential Exterior</h3>
-            <p>Hand wash, wheels, glass.</p>
-          </article>
-          <article class="card service-card">
-            <h3>Interior Refresh</h3>
-            <p>Vacuum, wipe-down, glass.</p>
-          </article>
-          <article class="card service-card">
+        <h2 class="section-title">Your vehicle deserves more than a car wash.</h2>
+        <p class="section-sub">
+          Pick your vehicle size and service for accurate pricing. Mobile-only, owner-operated, based in Henderson, NV.
+        </p>
+
+        <div class="menu-grid">
+          <article class="menu-item">
+            <span class="menu-label">01</span>
             <h3>Full Detail</h3>
-            <p>Interior + exterior.</p>
+            <p>Complete interior & exterior reset. Includes everything in the Interior & Exterior Detail.</p>
+            <p class="menu-price">Cars: $140</p>
+            <a href="#book" class="menu-cta">Book Full Detail</a>
+          </article>
+
+          <article class="menu-item">
+            <span class="menu-label">02</span>
+            <h3>Exterior Detail</h3>
+            <p>Foam pre-soak, hand wash, wheels cleaned, tires shined, exterior glass cleaned, ceramic sealant.</p>
+            <p class="menu-price">Cars: $80</p>
+            <a href="#book" class="menu-cta">Book Exterior</a>
+          </article>
+
+          <article class="menu-item">
+            <span class="menu-label">03</span>
+            <h3>Interior Detail</h3>
+            <p>Full interior vacuum, all surfaces cleaned, mats cleaned, glass & mirrors, light steam, door jambs, UV protection.</p>
+            <p class="menu-price">Cars: $100</p>
+            <a href="#book" class="menu-cta">Book Interior</a>
+          </article>
+
+          <article class="menu-item">
+            <span class="menu-label">04</span>
+            <h3>Headlight Restoration</h3>
+            <p>Cloudy lens back to clear. Headlight restorations with warranty (ask for details).</p>
+            <p class="menu-price">1 headlight: $60 &nbsp;|&nbsp; 2: $80</p>
+            <a href="#book" class="menu-cta">Book Headlights</a>
+          </article>
+
+          <article class="menu-item">
+            <span class="menu-label">05</span>
+            <h3>Add-ons</h3>
+            <p>Full shampoo & extraction, clay bar & wax, trim restoration.</p>
+            <p class="menu-price">From $50+</p>
+            <a href="#book" class="menu-cta">Ask about add-ons</a>
+          </article>
+
+          <article class="menu-item">
+            <span class="menu-label">06</span>
+            <h3>By quote</h3>
+            <p>Maintenance detail, fleet / multiple vehicles.</p>
+            <a href="#book" class="menu-cta">Ask for a quote</a>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt">
-      <div class="container about-inner">
-        <div class="about-text">
-          <h2>Owner-operated, not a franchise.</h2>
-          <p>A&T is run by Troy & Ari—just the two of us, working directly with you.</p>
-        </div>
-        <div class="card about-card">
-          <h3>What to expect</h3>
-          <ul>
-            <li>On-time arrivals</li>
-            <li>Phone-first communication</li>
-            <li>Respect for your space</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
+    <!-- WORK / BEFORE & AFTER -->
+    <section class="section section-alt" id="work">
       <div class="container">
-        <div class="section-header">
-          <h2>Pricing</h2>
-          <p>Simple, transparent ranges.</p>
-        </div>
-        <div class="grid pricing-grid">
-          <div class="card pricing-card">
-            <h3>Compact / Sedan</h3>
-            <p>Exterior, interior, full detail.</p>
-          </div>
-          <div class="card pricing-card">
-            <h3>SUV / Truck</h3>
-            <p>Exterior, interior, full detail.</p>
-          </div>
-          <div class="card pricing-card">
-            <h3>Extras</h3>
-            <p>Pet hair, stains, engine bay.</p>
-          </div>
+        <h2 class="section-title">We get the details others overlook.</h2>
+        <p class="section-sub">
+          Every photo here is an A&T job, shot before and after. We are detailed, thorough & precise.
+        </p>
+
+        <div class="work-grid">
+          <article class="work-item">
+            <h3>Headlight Restoration</h3>
+            <div class="work-images">
+              <div class="image-placeholder">BEFORE IMAGE HERE</div>
+              <div class="image-placeholder">AFTER IMAGE HERE</div>
+            </div>
+            <p>Cloudy lens back to clear. Headlight restorations with warranty (ask for details).</p>
+            <p class="work-price">From $60</p>
+          </article>
+
+          <article class="work-item">
+            <h3>Leather Seats</h3>
+            <div class="work-images">
+              <div class="image-placeholder">BEFORE IMAGE HERE</div>
+              <div class="image-placeholder">AFTER IMAGE HERE</div>
+            </div>
+            <p>Stains lifted out of grey leather. Add the +$10 leather conditioner to any interior.</p>
+            <p class="work-price">Interior Detail</p>
+          </article>
+
+          <article class="work-item">
+            <h3>Interior</h3>
+            <div class="work-images">
+              <div class="image-placeholder">BEFORE IMAGE HERE</div>
+              <div class="image-placeholder">AFTER IMAGE HERE</div>
+            </div>
+            <p>Vacuumed, wiped down, steamed and protected.</p>
+            <p class="work-price">From $100</p>
+          </article>
+
+          <article class="work-item">
+            <h3>Trim Restoration</h3>
+            <div class="work-images">
+              <div class="image-placeholder">BEFORE IMAGE HERE</div>
+              <div class="image-placeholder">AFTER IMAGE HERE</div>
+            </div>
+            <p>Faded black plastic brought back on a work van.</p>
+            <p class="work-price">From $50</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section section-alt">
-      <div class="container contact-inner">
-        <div class="contact-text">
-          <h2>Ready to book?</h2>
-          <p>Send a quick request with your car and preferred time.</p>
+    <!-- AREA / WE COME TO YOU -->
+    <section class="section" id="area">
+      <div class="container area-inner">
+        <div>
+          <h2 class="section-title">We roll up.</h2>
+          <p class="section-sub">
+            Mobile detailing and headlight restorations. Based in Henderson, NV. We come to you in Henderson,
+            Las Vegas, Boulder City and surrounding areas. Customer power and water required.
+          </p>
+          <p class="area-note">
+            Based in: Henderson, NV &nbsp;•&nbsp; Phone: (725) 290-1829
+          </p>
         </div>
-        <form class="card contact-form">
-          <div class="form-row">
-            <label>Name</label>
-            <input type="text" placeholder="Your name" />
+        <div class="area-steps">
+          <h3>How mobile works</h3>
+          <ol>
+            <li>Send your request — call, text or WhatsApp with vehicle and service.</li>
+            <li>Lock in a time — we confirm details and set a time.</li>
+            <li>We roll up — detailing and headlight restorations at your location.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section section-alt" id="reviews">
+      <div class="container reviews-inner">
+        <div>
+          <h2 class="section-title">Rated by real customers.</h2>
+          <p class="section-sub">
+            Review us on Google or Yelp. Live reviews can be embedded here later.
+          </p>
+          <div class="reviews-links">
+            <a href="#" class="btn btn-outline">Review on Google</a>
+            <a href="#" class="btn btn-outline">Review on Yelp</a>
           </div>
-          <div class="form-row">
-            <label>Phone</label>
-            <input type="tel" placeholder="(702) ••• ••••" />
+        </div>
+        <div class="reviews-box">
+          <!-- LIVE REVIEWS PREVIEW HERE -->
+          <div class="image-placeholder">REVIEWS WIDGET / PREVIEW HERE</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container about-inner">
+        <div>
+          <h2 class="section-title">Your vehicle. Our attention to detail.</h2>
+          <p class="section-sub">
+            We believe great detailing isn’t about rushing through as many vehicles as possible.
+            It’s about doing the job right.
+          </p>
+          <p>
+            Whether your vehicle needs a maintenance detail, a deep interior cleaning, or a complete
+            interior and exterior refresh, A&T Precision Detailing is here to make your vehicle look
+            and feel its best.
+          </p>
+          <p class="about-note">
+            We are detailed, thorough & precise. We get the details others overlook.
+          </p>
+          <p class="about-signoff">Ari & Troy — Owner-operated, based in Henderson, NV.</p>
+        </div>
+        <div class="about-image">
+          <!-- YOUR ABOUT IMAGE HERE -->
+          <div class="image-placeholder">YOUR ABOUT IMAGE HERE</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOK / REQUEST -->
+    <section class="section section-alt" id="book">
+      <div class="container book-inner">
+        <div class="book-text">
+          <h2 class="section-title">Book your detail.</h2>
+          <p class="section-sub">
+            Call, text or WhatsApp with your vehicle and service. Or use the form to draft your message.
+          </p>
+          <div class="book-contact">
+            <p><strong>Call</strong> (725) 290-1829</p>
+            <p><strong>Text</strong> (725) 290-1829</p>
+            <p><strong>WhatsApp</strong> Chat</p>
           </div>
+        </div>
+
+        <form class="book-form">
+          <h3>Request a quote</h3>
+          <p class="form-sub">Fill this in and we’ll write the message for you.</p>
+
           <div class="form-row">
-            <label>Vehicle</label>
-            <input type="text" placeholder="Year, make, model" />
+            <label>Vehicle type</label>
+            <div class="pill-row">
+              <span class="pill">Car</span>
+              <span class="pill">SUV</span>
+              <span class="pill">Truck</span>
+            </div>
           </div>
+
           <div class="form-row">
-            <label>Preferred service</label>
-            <select>
-              <option>Select a service</option>
-              <option>Essential Exterior</option>
-              <option>Interior Refresh</option>
-              <option>Full Detail</option>
-            </select>
+            <label>Service</label>
+            <input type="text" placeholder="Full Detail" />
           </div>
-          <button class="btn btn-primary full-width" type="submit">Submit request</button>
+
+          <div class="form-row">
+            <label>Year, make & model (optional)</label>
+            <input type="text" placeholder="e.g. 2020 Honda Pilot" />
+          </div>
+
+          <div class="form-row">
+            <label>Notes (optional)</label>
+            <textarea rows="3" placeholder="Neighborhood, stains, pet hair, add-ons..."></textarea>
+          </div>
+
+          <div class="form-row">
+            <label>Your message</label>
+            <textarea rows="2">Hi A&T, I’d like a quote for a Full Detail on my car.</textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn btn-primary">Text my request</button>
+            <button type="button" class="btn btn-outline">WhatsApp my request</button>
+          </div>
+
+          <p class="form-note">
+            Nothing is sent from this page. An online scheduler can replace this form later so customers pick a live time slot.
+          </p>
         </form>
       </div>
     </section>
   </main>
 
+  <!-- STICKY BOOK BAR -->
+  <div class="book-bar">
+    <div class="container book-bar-inner">
+      <span>Ready to book? Call or text (725) 290-1829.</span>
+      <a href="#book" class="btn btn-primary">Book your detail</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <span>© <span id="year"></span> A&T Precision Detailing • Henderson, NV</span>
-      <span>Built phone-first for local clients.</span>
+      <span>A&T Precision Detailing • Henderson’s trusted mobile detailer.</span>
+      <span>© 2024 A&T Precision Detailing. Based in Henderson, NV.</span>
+      <span>Design inspired by M77 Studios preview.</span>
     </div>
   </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
